@@ -1,0 +1,6 @@
+﻿[
+  { "Movement": "Armored" },
+  { "Movement": "Cavalry" },
+  { "Movement": "Flying" },
+  { "Movement": "Infantry" }
+]

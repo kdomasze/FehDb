@@ -1,0 +1,54 @@
+﻿[
+  {
+    "Color": "Red",
+    "Arm": "Sword"
+  },
+  {
+    "Color": "Green",
+    "Arm": "Axe"
+  },
+  {
+    "Color": "Blue",
+    "Arm": "Lance"
+  },
+  {
+    "Color": "Red",
+    "Arm": "Tome"
+  },
+  {
+    "Color": "Green",
+    "Arm": "Tome"
+  },
+  {
+    "Color": "Blue",
+    "Arm": "Tome"
+  },
+  {
+    "Color": "Colorless",
+    "Arm": "Staff"
+  },
+  {
+    "Color": "Colorless",
+    "Arm": "Bow"
+  },
+  {
+    "Color": "Colorless",
+    "Arm": "Dagger"
+  },
+  {
+    "Color": "Multicolor",
+    "Arm": "Breath"
+  },
+  {
+    "Color": "Red",
+    "Arm": "Breath"
+  },
+  {
+    "Color": "Blue",
+    "Arm": "Breath"
+  },
+  {
+    "Color": "Green",
+    "Arm": "Breath"
+  }
+]
