@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace FehDb.API.Models.Entity.WeaponModel
     {
         [ForeignKey("Weapon")]
         public int WeaponID { get; set; }
+        [Required]
         public int SpCost { get; set; }
         public int? Medals { get; set; }
         public int? Stones { get; set; }

@@ -75,6 +75,7 @@ namespace FehDb.API.V1.Controllers
         public async Task<IActionResult> Post([FromBody]WeaponResource resource)
         {
             if (resource == null) return BadRequest("Request body is null.");
+            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
 
             try
             {
@@ -104,6 +105,7 @@ namespace FehDb.API.V1.Controllers
         {
             if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
             if (resource == null) return BadRequest(new ArgumentNullException("resource", "Supplied WeaponResource is null."));
+            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
             if (id != resource.ID) return BadRequest(new ArgumentNullException("resource.ID", "Supplied WeaponResource.ID is null."));
 
             try
