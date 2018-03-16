@@ -11,7 +11,7 @@ namespace FehDb.API.Repositories
 {
     public class BaseRepository<T> where T : BaseEntity
     {
-        private readonly FehContext _context;
+        internal readonly FehContext _context;
 
         internal readonly DbSet<T> _entities;
 
@@ -38,11 +38,15 @@ namespace FehDb.API.Repositories
             await _entities.AddAsync(entity);
         }
 
-        public async Task Update(T entity)
+        public virtual async Task Update(T entity)
         {
             if (entity == null) throw new ArgumentNullException("Input data is null.");
 
             var oldEntity = await _context.FindAsync<T>(entity.ID);
+
+            entity.DateAdded = oldEntity.DateAdded;
+            entity.DateModified = oldEntity.DateModified;
+
             _context.Entry(oldEntity).CurrentValues.SetValues(entity);
         }
 

@@ -17,6 +17,10 @@ namespace FehDb.API.Services
 
         private WeaponRepository _weaponRepository;
         private WeaponTypeRepository _weaponTypeRepository;
+        private BaseRepository<WeaponCost> _weaponCostRepository;
+
+        private BaseRepository<WeaponEffectiveAgainst> _WeaponEffectiveAgainstRepository;
+        private BaseRepository<WeaponStatChange> _weaponStatChangeRepository;
 
         public WeaponService(FehContext context, IMapper mapper)
         {
@@ -24,9 +28,14 @@ namespace FehDb.API.Services
 
             _weaponRepository = new WeaponRepository(context);
             _weaponTypeRepository = new WeaponTypeRepository(context);
+            _weaponCostRepository = new BaseRepository<WeaponCost>(context);
+
+            _WeaponEffectiveAgainstRepository = new BaseRepository<WeaponEffectiveAgainst>(context);
+            _weaponStatChangeRepository = new BaseRepository<WeaponStatChange>(context);
+
         }
 
-        public async Task<IList<WeaponResource>> GetWeapons()
+    public async Task<IList<WeaponResource>> GetWeapons()
         {
             var weaponsEnumerable = await _weaponRepository.GetAllAsync();
             
@@ -49,9 +58,7 @@ namespace FehDb.API.Services
         public async Task Create(WeaponResource entity)
         {
             var weapon = _mapper.Map<Weapon>(entity);
-
-            weapon.DateAdded = DateTime.Now;
-
+            
             // Ensure WeaponType is supplied
             if (weapon.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
 
@@ -61,37 +68,7 @@ namespace FehDb.API.Services
             
             // Ensure WeaponCost is supplied
             if(weapon.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
-
-            weapon.WeaponCost.DateAdded = weapon.DateAdded;
-
-            // Add DateAdded field to WeaponEffectiveAgainst details
-            if (weapon.WeaponEffectiveAgainst != null)
-            {
-                if (weapon.WeaponEffectiveAgainst.WeaponTypes != null)
-                {
-                    foreach(var wtea in weapon.WeaponEffectiveAgainst.WeaponTypes)
-                    {
-                        wtea.DateAdded = weapon.DateAdded;
-                    }
-                }
-
-                if (weapon.WeaponEffectiveAgainst.MovementTypes != null)
-                {
-                    foreach (var mtea in weapon.WeaponEffectiveAgainst.MovementTypes)
-                    {
-                        mtea.DateAdded = weapon.DateAdded;
-                    }
-                }
-
-                weapon.WeaponEffectiveAgainst.DateAdded = weapon.DateAdded;
-            }
-
-            // Add DateAdded field to WeaponStatChange details
-            if (weapon.WeaponStatChange != null)
-            {
-                weapon.WeaponStatChange.DateAdded = weapon.DateAdded;
-            }
-
+            
             // Insert and save
             await _weaponRepository.Insert(weapon);
             await _weaponRepository.SaveChanges();
@@ -101,8 +78,6 @@ namespace FehDb.API.Services
         {
             var entity = _mapper.Map<Weapon>(resource);
             
-            entity.DateModified = DateTime.Now;
-
             // Ensure WeaponType is supplied
             if (entity.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
 
@@ -113,38 +88,20 @@ namespace FehDb.API.Services
             // Ensure WeaponCost is supplied
             if (entity.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
 
-            entity.WeaponCost.DateModified = entity.DateModified;
-
-            // Add DateModified field to WeaponEffectiveAgainst details
-            if (entity.WeaponEffectiveAgainst != null)
-            {
-                if (entity.WeaponEffectiveAgainst.WeaponTypes != null)
-                {
-                    foreach (var wtea in entity.WeaponEffectiveAgainst.WeaponTypes)
-                    {
-                        wtea.DateModified = entity.DateModified;
-                    }
-                }
-
-                if (entity.WeaponEffectiveAgainst.MovementTypes != null)
-                {
-                    foreach (var mtea in entity.WeaponEffectiveAgainst.MovementTypes)
-                    {
-                        mtea.DateModified = entity.DateModified;
-                    }
-                }
-
-                entity.WeaponEffectiveAgainst.DateModified = entity.DateModified;
-            }
-
-            // Add DateModified field to WeaponStatChange details
-            if (entity.WeaponStatChange != null)
-            {
-                entity.WeaponStatChange.DateModified = entity.DateModified;
-            }
-
-            // Update and save
+            // Update weapon
             await _weaponRepository.Update(entity);
+
+            // Update weaponCost
+            await _weaponCostRepository.Update(entity.WeaponCost);
+
+            // Update WeaponEffectiveAgainst
+            if(entity.WeaponEffectiveAgainst != null)
+                await _WeaponEffectiveAgainstRepository.Update(entity.WeaponEffectiveAgainst);
+
+            // Update WeaponStatChange
+            if (entity.WeaponStatChange != null)
+                await _weaponStatChangeRepository.Update(entity.WeaponStatChange);
+            
             await _weaponRepository.SaveChanges();
         }
 
