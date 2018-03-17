@@ -35,11 +35,11 @@ namespace FehDb.API.Services
 
         }
 
-    public async Task<IList<WeaponResource>> GetWeapons()
+    public async Task<PagedResult<WeaponResource>> GetWeapons(int page, int pageSize)
         {
-            var weaponsEnumerable = await _weaponRepository.GetAllAsync();
+            var weaponsEnumerable = await _weaponRepository.GetAllAsync(page, pageSize);
             
-            var result = _mapper.Map<IList<WeaponResource>>(weaponsEnumerable.ToList());
+            var result = _mapper.Map<PagedResult<WeaponResource>>(weaponsEnumerable);
 
             return result;
         }

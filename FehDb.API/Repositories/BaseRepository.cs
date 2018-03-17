@@ -1,4 +1,5 @@
 ﻿using FehDb.API.Contexts;
+using FehDb.API.Extensions;
 using FehDb.API.Models;
 using FehDb.API.Models.Entity;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +22,9 @@ namespace FehDb.API.Repositories
             _entities = context.Set<T>();
         }
 
-        public virtual async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<PagedResult<T>> GetAllAsync(int page, int pageSize)
         {
-            return await _entities.ToListAsync();
+            return await _entities.GetPaged(page, pageSize);
         }
 
         public virtual async Task<T> GetByIdAsync(int id)

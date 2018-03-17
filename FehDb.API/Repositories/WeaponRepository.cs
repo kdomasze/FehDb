@@ -1,4 +1,5 @@
 ﻿using FehDb.API.Contexts;
+using FehDb.API.Extensions;
 using FehDb.API.Models;
 using FehDb.API.Models.Entity.WeaponModel;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,7 @@ namespace FehDb.API.Repositories
     {
         public WeaponRepository(FehContext context) : base(context) {}
 
-        public override async Task<IEnumerable<Weapon>> GetAllAsync()
+        public override async Task<PagedResult<Weapon>> GetAllAsync(int page, int pageSize)
         {
             IQueryable<Weapon> weaponSet = _entities
                 .Include(w => w.WeaponType)
@@ -21,7 +22,7 @@ namespace FehDb.API.Repositories
                 .Include(w => w.WeaponStatChange)
                 .Include(w => w.WeaponEffectiveAgainst);
 
-            return await weaponSet.ToListAsync();
+            return await weaponSet.GetPaged(page, pageSize);
         }
 
         public override async Task<Weapon> GetByIdAsync(int id)

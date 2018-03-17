@@ -26,9 +26,9 @@ namespace FehDb.API.V1.Controllers
         /// <response code="200">Returns the list of Weapon</response>
         [HttpGet(Name = "GetAllWeapons")]
         [ProducesResponseType(typeof(IList<WeaponResource>), 200)]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery] int page, [FromQuery] int pageSize)
         {
-            var result = await _service.GetWeapons();
+            var result = await _service.GetWeapons(page, pageSize);
             return Ok(result);
         }
 
