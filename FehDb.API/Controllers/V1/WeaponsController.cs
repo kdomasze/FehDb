@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FehDb.API.Models;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FehDb.API.V1.Controllers
 {
+    [Produces("application/json")]
     [Route("api/v1/[controller]")]
     public class WeaponsController : Controller
     {
@@ -22,10 +24,12 @@ namespace FehDb.API.V1.Controllers
         /// <summary>
         /// Gets all Weapons
         /// </summary>
+        /// <param name="page">The desired page</param>
+        /// <param name="pageSize">The desired number of items to return per page</param>
         /// <returns>A list of Weapons</returns>
         /// <response code="200">Returns the list of Weapon</response>
         [HttpGet(Name = "GetAllWeapons")]
-        [ProducesResponseType(typeof(IList<WeaponResource>), 200)]
+        [ProducesResponseType(typeof(PagedResult<WeaponResource>), 200)]
         public async Task<IActionResult> Get([FromQuery] int page, [FromQuery] int pageSize)
         {
             var result = await _service.GetWeapons(page, pageSize);

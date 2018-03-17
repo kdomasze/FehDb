@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace FehDb.API
 {
@@ -35,6 +37,14 @@ namespace FehDb.API
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "FehDb API", Version = "v1" });
+                var basePath = AppContext.BaseDirectory;
+                var xmlPath = Path.Combine(basePath, "FehDb.API.xml");
+                c.IncludeXmlComments(xmlPath);
+            });
+
             Installer.ConfigureServices(services, Configuration);
         }
 
@@ -52,6 +62,13 @@ namespace FehDb.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseSwagger();
+            
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "FehDb API V1");
+            });
 
             app.UseMvc();
         }
