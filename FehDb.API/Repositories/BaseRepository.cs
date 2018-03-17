@@ -1,6 +1,7 @@
 ﻿using FehDb.API.Contexts;
 using FehDb.API.Extensions;
 using FehDb.API.Models;
+using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -22,9 +23,9 @@ namespace FehDb.API.Repositories
             _entities = context.Set<T>();
         }
 
-        public virtual async Task<PagedResult<T>> GetAllAsync(int page, int pageSize)
+        public virtual async Task<PagedResult<T>> GetAllAsync(Query query, BaseFilter filter)
         {
-            return await _entities.GetPaged(page, pageSize);
+            return await _entities.GetPaged(query.Page, query.PageSize);
         }
 
         public virtual async Task<T> GetByIdAsync(int id)

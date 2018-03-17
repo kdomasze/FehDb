@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using FehDb.API.Models;
+using FehDb.API.Models.Binding;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -25,15 +26,14 @@ namespace FehDb.API.V1.Controllers
         /// <summary>
         /// Gets all Weapons
         /// </summary>
-        /// <param name="page">The desired page</param>
-        /// <param name="pageSize">The desired number of items to return per page</param>
+        /// <param name="query">The query parameters</param>
         /// <returns>A list of Weapons</returns>
         /// <response code="200">Returns the list of Weapon</response>
         [HttpGet(Name = "GetAllWeapons")]
         [ProducesResponseType(typeof(PagedResult<WeaponResource>), 200)]
-        public async Task<IActionResult> Get([FromQuery] int page, [FromQuery] int pageSize)
+        public async Task<IActionResult> Get([FromQuery] Query query, [FromQuery] WeaponFilter filter)
         {
-            var result = await _service.GetWeapons(page, pageSize);
+            var result = await _service.GetWeapons(query, filter);
             return Ok(result);
         }
 

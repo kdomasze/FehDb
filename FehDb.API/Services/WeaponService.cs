@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FehDb.API.Contexts;
 using FehDb.API.Models;
+using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Repositories;
@@ -35,9 +36,9 @@ namespace FehDb.API.Services
 
         }
 
-    public async Task<PagedResult<WeaponResource>> GetWeapons(int page, int pageSize)
+    public async Task<PagedResult<WeaponResource>> GetWeapons(Query query, WeaponFilter filter)
         {
-            var weaponsEnumerable = await _weaponRepository.GetAllAsync(page, pageSize);
+            var weaponsEnumerable = await _weaponRepository.GetAllAsync(query, filter);
             
             var result = _mapper.Map<PagedResult<WeaponResource>>(weaponsEnumerable);
 
