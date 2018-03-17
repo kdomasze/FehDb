@@ -38,6 +38,8 @@ namespace FehDb.API
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
 
+            services.AddSingleton(Configuration);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "FehDb API", Version = "v1" });
