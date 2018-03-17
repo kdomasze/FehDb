@@ -38,35 +38,7 @@ namespace FehDb.API
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 });
 
-            services.AddSingleton(Configuration);
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "FehDb API", Version = "v1" });
-                var basePath = AppContext.BaseDirectory;
-                var xmlPath = Path.Combine(basePath, "FehDb.API.xml");
-                c.IncludeXmlComments(xmlPath);
-            });
-
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = "JwtBearer";
-                options.DefaultChallengeScheme = "JwtBearer";
-            })
-            .AddJwtBearer("JwtBearer", jwtBearerOptions =>
-            {
-                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(Configuration.GetSection("Jwt").GetValue<string>("Secret"))),
-                    ValidateIssuer = true,
-                    ValidIssuer = Configuration.GetSection("Jwt").GetValue<string>("Issuer"),
-                    ValidateAudience = true,
-                    ValidAudience = Configuration.GetSection("Jwt").GetValue<string>("Audience"),
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.FromMinutes(5)
-                };
-            });
+            services.AddSingleton(Configuration);           
 
             Installer.ConfigureServices(services, Configuration);
         }

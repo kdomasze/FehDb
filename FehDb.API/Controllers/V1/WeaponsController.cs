@@ -74,10 +74,12 @@ namespace FehDb.API.V1.Controllers
         /// <returns>The newly created Weapon</returns>
         /// <response code="201">Returns the newly-created Weapon</response>
         /// <response code="400">If the item is null</response>
+        /// <response code="403">Supplied JWT token invalid</response>
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(WeaponResource), 201)]
         [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 403)]
         public async Task<IActionResult> Post([FromBody]WeaponResource resource)
         {
             if (resource == null) return BadRequest("Request body is null.");
@@ -104,10 +106,12 @@ namespace FehDb.API.V1.Controllers
         /// <param name="resource">Updated version of a previously-created Weapon</param>
         /// <returns>No content</returns>
         /// <response code="204">Successfully updated weapon</response>
+        /// <response code="403">Supplied JWT token invalid</response>
         /// <response code="404">Given ID does not exist</response>
         [Authorize]
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(void), 403)]
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> Put(int id, [FromBody] WeaponResource resource)
         {
@@ -134,10 +138,12 @@ namespace FehDb.API.V1.Controllers
         /// <param name="id">The ID of the Weapon to be deleted</param>
         /// <returns>No content</returns>
         /// <response code="200">Successfully deleted Weapon</response>
+        /// <response code="403">Supplied JWT token invalid</response>
         /// <response code="404">Given ID does not match a Weapon</response>
         [Authorize]
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(void), 403)]
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> Delete(int id)
         {

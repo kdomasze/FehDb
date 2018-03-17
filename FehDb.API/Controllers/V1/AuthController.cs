@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -22,12 +23,26 @@ namespace FehDb.API.Controllers.V1
             _configuration = Configuration;
         }
 
-        [Route("Token")]
-        [HttpGet]
-        public IActionResult GetToken([FromQuery]string user, [FromQuery]string password)
+        /// <summary>
+        /// Returns a JWT token for admin actions
+        /// </summary>
+        /// <param name="user">The username of the administrator (default: User)</param>
+        /// <param name="password">The password of the administrator (default: Password)</param>
+        /// <returns>A JWT token</returns>
+        /// <response code="200">Returns the JWT Token</response>
+        /// <response code="400">Username or password is null</response>
+        /// <response code="403">Incorrect username or password</response>
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [HttpGet("Token")]
+        [ProducesResponseType(typeof(JWTToken), 200)]
+        [ProducesResponseType(typeof(void), 400)]
+        [ProducesResponseType(typeof(void), 403)]
+        public IActionResult GetToken([Required, FromQuery]string user, [Required, FromQuery]string password)
         {
+            if (user == null || password == null) return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+
             if (user != _configuration["Jwt:adminUser"] || password != _configuration["Jwt:adminPassword"])
-                return Forbid();
+                return Forbid("Incorrect username or password.");
 
             var claims = new[]
             {
@@ -46,7 +61,17 @@ namespace FehDb.API.Controllers.V1
 
             var tokenEncoded = new JwtSecurityTokenHandler().WriteToken(token);
 
-            return new OkObjectResult(new { token = tokenEncoded });
+            var result = new JWTToken()
+            {
+                Token = tokenEncoded
+            };
+
+            return new OkObjectResult(result);
         }
+    }
+
+    public class JWTToken
+    {
+        public string Token { get; set; }
     }
 }
