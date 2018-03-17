@@ -6,6 +6,7 @@ using AutoMapper;
 using FehDb.API.Models;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FehDb.API.V1.Controllers
@@ -73,6 +74,7 @@ namespace FehDb.API.V1.Controllers
         /// <returns>The newly created Weapon</returns>
         /// <response code="201">Returns the newly-created Weapon</response>
         /// <response code="400">If the item is null</response>
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(WeaponResource), 201)]
         [ProducesResponseType(typeof(void), 400)]
@@ -103,6 +105,7 @@ namespace FehDb.API.V1.Controllers
         /// <returns>No content</returns>
         /// <response code="204">Successfully updated weapon</response>
         /// <response code="404">Given ID does not exist</response>
+        [Authorize]
         [HttpPut("{id}")]
         [ProducesResponseType(typeof(void), 204)]
         [ProducesResponseType(typeof(void), 404)]
@@ -132,6 +135,7 @@ namespace FehDb.API.V1.Controllers
         /// <returns>No content</returns>
         /// <response code="200">Successfully deleted Weapon</response>
         /// <response code="404">Given ID does not match a Weapon</response>
+        [Authorize]
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(void), 204)]
         [ProducesResponseType(typeof(void), 404)]

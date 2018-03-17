@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -45,6 +46,26 @@ namespace FehDb.API
                 c.IncludeXmlComments(xmlPath);
             });
 
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            })
+            .AddJwtBearer("JwtBearer", jwtBearerOptions =>
+            {
+                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(Configuration.GetSection("Jwt").GetValue<string>("Secret"))),
+                    ValidateIssuer = true,
+                    ValidIssuer = Configuration.GetSection("Jwt").GetValue<string>("Issuer"),
+                    ValidateAudience = true,
+                    ValidAudience = Configuration.GetSection("Jwt").GetValue<string>("Audience"),
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.FromMinutes(5)
+                };
+            });
+
             Installer.ConfigureServices(services, Configuration);
         }
 
@@ -69,6 +90,8 @@ namespace FehDb.API
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "FehDb API V1");
             });
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }
