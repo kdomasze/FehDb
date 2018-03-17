@@ -55,7 +55,7 @@ namespace FehDb.API.Services
             return result;
         }
 
-        public async Task Create(WeaponResource entity)
+        public async Task<WeaponResource> Create(WeaponResource entity)
         {
             var weapon = _mapper.Map<Weapon>(entity);
             
@@ -72,6 +72,8 @@ namespace FehDb.API.Services
             // Insert and save
             await _weaponRepository.Insert(weapon);
             await _weaponRepository.SaveChanges();
+
+            return _mapper.Map<WeaponResource>(weapon);
         }
 
         public async Task Update(int ID, WeaponResource resource)

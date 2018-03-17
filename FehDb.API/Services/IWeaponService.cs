@@ -12,7 +12,7 @@ namespace FehDb.API.Services
     {
         Task<PagedResult<WeaponResource>> GetWeapons(int page, int pageSize);
         Task<WeaponResource> GetWeaponByID(int ID);
-        Task Create(WeaponResource entity);
+        Task<WeaponResource> Create(WeaponResource entity);
         Task Update(int ID, WeaponResource resource);
         Task Delete(int ID);
     }

@@ -77,17 +77,18 @@ namespace FehDb.API.V1.Controllers
             if (resource == null) return BadRequest("Request body is null.");
             if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
 
+            WeaponResource result;
+
             try
             {
-                await _service.Create(resource);
+                result = await _service.Create(resource);
             }
             catch(Exception ex)
             {
                 return BadRequest(ex);
             }
-
-            //Todo: route to getbyid
-            return NoContent();
+            
+            return CreatedAtRoute("GetWeapon", new { id = result.ID }, result);
         }
 
         /// <summary>
