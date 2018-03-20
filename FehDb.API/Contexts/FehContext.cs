@@ -11,18 +11,19 @@ namespace FehDb.API.Contexts
 {
     public class FehContext : DbContext
     {
-        public DbSet<Weapon> Weapons { get; set; }
-        public DbSet<WeaponStatChange> StatChanges { get; set; }
-        public DbSet<WeaponCost> WeaponCosts { get; set; }
-        public DbSet<WeaponEffectiveAgainst> WeaponEffectiveAgainsts { get; set; }
+        public virtual DbSet<Weapon> Weapons { get; set; }
+        public virtual DbSet<WeaponStatChange> StatChanges { get; set; }
+        public virtual DbSet<WeaponCost> WeaponCosts { get; set; }
+        public virtual DbSet<WeaponEffectiveAgainst> WeaponEffectiveAgainsts { get; set; }
 
-        public DbSet<WeaponEffectiveAgainstMovementType> WeaponEffectiveAgainstMovementTypes { get; set; }
-        public DbSet<WeaponEffectiveAgainstWeaponType> WeaponEffectiveAgainstWeaponType { get; set; }
-        
-        public DbSet<WeaponType> WeaponTypes { get; set; }
-        public DbSet<MovementType> MovementTypes { get; set; }
+        public virtual DbSet<WeaponEffectiveAgainstMovementType> WeaponEffectiveAgainstMovementTypes { get; set; }
+        public virtual DbSet<WeaponEffectiveAgainstWeaponType> WeaponEffectiveAgainstWeaponType { get; set; }
+
+        public virtual DbSet<WeaponType> WeaponTypes { get; set; }
+        public virtual DbSet<MovementType> MovementTypes { get; set; }
 
         public FehContext(DbContextOptions options) : base(options) { }
+        public FehContext() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

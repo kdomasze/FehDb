@@ -1,4 +1,5 @@
-﻿using FehDb.API.Models.Binding;
+﻿using FehDb.API.Extensions;
+using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
 using System;
 using System.Collections.Generic;
@@ -56,90 +57,60 @@ namespace FehDb.API.Buisness
         {
             if (filter.HaveFilter())
             {
-                if (filter.IdFrom.HasValue)
-                    weapon = weapon.Where(x => x.ID >= filter.IdFrom);
-                if (filter.IdTo.HasValue)
-                    weapon = weapon.Where(x => x.ID <= filter.IdTo);
+                weapon = weapon.WhereIf(filter.IdFrom.HasValue, x => x.ID >= filter.IdFrom);
+                weapon = weapon.WhereIf(filter.IdTo.HasValue, x => x.ID <= filter.IdTo);
 
-                if (!string.IsNullOrEmpty(filter.Name))
-                    weapon = weapon.Where(x => x.Name.Contains(filter.Name));
+                weapon = weapon.WhereIf(!string.IsNullOrEmpty(filter.Name), x => x.Name.Contains(filter.Name));
 
-                if (filter.MightFrom.HasValue)
-                    weapon = weapon.Where(x => x.Might >= filter.MightFrom);
-                if (filter.MightTo.HasValue)
-                    weapon = weapon.Where(x => x.Might <= filter.MightTo);
+                weapon = weapon.WhereIf(filter.MightFrom.HasValue, x => x.Might >= filter.MightFrom);
+                weapon = weapon.WhereIf(filter.MightTo.HasValue, x => x.Might <= filter.MightTo);
 
-                if (filter.RangeFrom.HasValue)
-                    weapon = weapon.Where(x => x.Range >= filter.RangeFrom);
-                if (filter.RangeTo.HasValue)
-                    weapon = weapon.Where(x => x.Range <= filter.RangeTo);
+                weapon = weapon.WhereIf(filter.RangeFrom.HasValue, x => x.Range >= filter.RangeFrom);
+                weapon = weapon.WhereIf(filter.RangeTo.HasValue, x => x.Range <= filter.RangeTo);
 
-                if (!string.IsNullOrEmpty(filter.Effect))
-                    weapon = weapon.Where(x => x.Effect.Contains(filter.Effect));
+                weapon = weapon.WhereIf(!string.IsNullOrEmpty(filter.Effect), x => x.Effect.Contains(filter.Effect));
 
-                if (filter.Exclusive.HasValue)
-                    weapon = weapon.Where(x => x.Exclusive == filter.Exclusive);
+                weapon = weapon.WhereIf(filter.Exclusive.HasValue, x => x.Exclusive == filter.Exclusive);
 
-                if (filter.Refined.HasValue)
-                    weapon = weapon.Where(x => x.Refined == filter.Refined);
+                weapon = weapon.WhereIf(filter.Refined.HasValue, x => x.Refined == filter.Refined);
 
                 if (filter.WeaponCost.HaveFilter())
                 {
-                    if (filter.WeaponCost.SpCostFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.SpCost >= filter.WeaponCost.SpCostFrom);
-                    if (filter.WeaponCost.SpCostTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.SpCost <= filter.WeaponCost.SpCostTo);
+                    weapon = weapon.WhereIf(filter.WeaponCost.SpCostFrom.HasValue, x => x.WeaponCost.SpCost >= filter.WeaponCost.SpCostFrom);
+                    weapon = weapon.WhereIf(filter.WeaponCost.SpCostTo.HasValue, x => x.WeaponCost.SpCost <= filter.WeaponCost.SpCostTo);
 
-                    if (filter.WeaponCost.MedalsFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Medals >= filter.WeaponCost.MedalsFrom);
-                    if (filter.WeaponCost.MedalsTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Medals <= filter.WeaponCost.MedalsTo);
+                    weapon = weapon.WhereIf(filter.WeaponCost.MedalsFrom.HasValue, x => x.WeaponCost.Medals >= filter.WeaponCost.MedalsFrom);
+                    weapon = weapon.WhereIf(filter.WeaponCost.MedalsTo.HasValue, x => x.WeaponCost.Medals <= filter.WeaponCost.MedalsTo);
 
-                    if (filter.WeaponCost.StonesFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Stones >= filter.WeaponCost.StonesFrom);
-                    if (filter.WeaponCost.StonesTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Stones <= filter.WeaponCost.StonesTo);
+                    weapon = weapon.WhereIf(filter.WeaponCost.StonesFrom.HasValue, x => x.WeaponCost.Stones >= filter.WeaponCost.StonesFrom);
+                    weapon = weapon.WhereIf(filter.WeaponCost.StonesTo.HasValue, x => x.WeaponCost.Stones <= filter.WeaponCost.StonesTo);
 
-                    if (filter.WeaponCost.DewFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Dew >= filter.WeaponCost.DewFrom);
-                    if (filter.WeaponCost.DewTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponCost.Dew <= filter.WeaponCost.DewTo);
+                    weapon = weapon.WhereIf(filter.WeaponCost.DewFrom.HasValue, x => x.WeaponCost.Dew >= filter.WeaponCost.DewFrom);
+                    weapon = weapon.WhereIf(filter.WeaponCost.DewTo.HasValue, x => x.WeaponCost.Dew <= filter.WeaponCost.DewTo);
                 }
 
                 if (filter.WeaponStatChange.HaveFilter())
                 {
-                    if (filter.WeaponStatChange.HPFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.HP >= filter.WeaponStatChange.HPFrom);
-                    if (filter.WeaponStatChange.HPTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.HP <= filter.WeaponStatChange.HPTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.HPFrom.HasValue, x => x.WeaponStatChange.HP >= filter.WeaponStatChange.HPFrom);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.HPTo.HasValue, (x => x.WeaponStatChange.HP <= filter.WeaponStatChange.HPTo);
 
-                    if (filter.WeaponStatChange.MightFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Might >= filter.WeaponStatChange.MightFrom);
-                    if (filter.WeaponStatChange.MightTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Might <= filter.WeaponStatChange.MightTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.MightFrom.HasValue, x => x.WeaponStatChange.Might >= filter.WeaponStatChange.MightFrom);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.MightTo.HasValue, x => x.WeaponStatChange.Might <= filter.WeaponStatChange.MightTo);
 
-                    if (filter.WeaponStatChange.SpeedFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Speed >= filter.WeaponStatChange.SpeedFrom);
-                    if (filter.WeaponStatChange.SpeedTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Speed <= filter.WeaponStatChange.SpeedTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.SpeedFrom.HasValue, x => x.WeaponStatChange.Speed >= filter.WeaponStatChange.SpeedFrom);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.SpeedTo.HasValue, x => x.WeaponStatChange.Speed <= filter.WeaponStatChange.SpeedTo);
 
-                    if (filter.WeaponStatChange.DefenseFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Defense >= filter.WeaponStatChange.DefenseFrom);
-                    if (filter.WeaponStatChange.DefenseTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Defense <= filter.WeaponStatChange.DefenseTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.DefenseFrom.HasValue, x => x.WeaponStatChange.Defense >= filter.WeaponStatChange.DefenseFrom);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.DefenseTo.HasValue, x => x.WeaponStatChange.Defense <= filter.WeaponStatChange.DefenseTo);
 
-                    if (filter.WeaponStatChange.ResistanceFrom.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Resistance >= filter.WeaponStatChange.ResistanceFrom);
-                    if (filter.WeaponStatChange.ResistanceTo.HasValue)
-                        weapon = weapon.Where(x => x.WeaponStatChange.Resistance <= filter.WeaponStatChange.ResistanceTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.ResistanceFrom.HasValue, x => x.WeaponStatChange.Resistance >= filter.WeaponStatChange.ResistanceFrom);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.ResistanceTo.HasValue, x => x.WeaponStatChange.Resistance <= filter.WeaponStatChange.ResistanceTo);
                 }
 
                 if (filter.WeaponType.HaveFilter())
                 {
-                    if (filter.WeaponType.WeaponColor.HasValue)
-                        weapon = weapon.Where(x => x.WeaponType.Color == filter.WeaponType.WeaponColor);
-                    if (filter.WeaponType.WeaponArm.HasValue)
-                        weapon = weapon.Where(x => x.WeaponType.Arm == filter.WeaponType.WeaponArm);
+                    weapon = weapon.WhereIf(filter.WeaponType.WeaponColor.HasValue, x => x.WeaponType.Color == filter.WeaponType.WeaponColor);
+                    weapon = weapon.WhereIf(filter.WeaponType.WeaponArm.HasValue, x => x.WeaponType.Arm == filter.WeaponType.WeaponArm);
                 }
             }
 
