@@ -29,12 +29,15 @@ namespace FehDb.API.Buisness
             return GenerateSaltedHash(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(username + _configuration["Auth:Secret"]));
         }
 
-        public static bool CheckWaitPeriod(User user)
+        public static bool CheckWaitPeriod(User user, IConfiguration _configuration)
         {
+            if (user.LoginAttempts == 0) return true;
+
             var currentTime = DateTime.Now;
-            float waitTimePerFailedLogin = 5;
+            float waitTimePerFailedLogin = float.Parse(_configuration["Auth:WaitTime"]);
 
             float waitTime = waitTimePerFailedLogin * user.LoginAttempts;
+
             var secondsSinceLastLogin = (currentTime - user.LastLoginAttempt).Seconds;
 
             if (secondsSinceLastLogin > waitTime) return true;

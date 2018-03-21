@@ -27,22 +27,20 @@ namespace FehDb.API.Repositories
             return await _entities.SingleOrDefaultAsync(s => s.Username == name);
         }
 
-        public async Task MarkFailedLogin(User user)
+        public void MarkFailedLogin(User user)
         {
             user.LoginAttempts++;
             user.LastLoginAttempt = DateTime.Now;
 
             _entities.Update(user);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task MarkSuccessfulLogin(User user)
+        public void MarkSuccessfulLogin(User user)
         {
             user.LoginAttempts = 0;
             user.LastLoginAttempt = DateTime.Now;
 
             _entities.Update(user);
-            await _context.SaveChangesAsync();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FehDb.API.Models.Entity.UserModel;
 using FehDb.API.Models.Resource.UserModel;
 using FehDb.API.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -31,65 +32,84 @@ namespace FehDb.API.Controllers.V1
         /// <summary>
         /// Returns a JWT token for admin actions
         /// </summary>
-        /// <param name="user">The username of the administrator (default: User)</param>
-        /// <param name="password">The password of the administrator (default: Password)</param>
+        /// <param name="user">The login details of the user</param>
         /// <returns>A JWT token</returns>
         /// <response code="200">Returns the JWT Token</response>
         /// <response code="400">Username or password is null</response>
         /// <response code="403">Incorrect username or password</response>
-        [ApiExplorerSettings(IgnoreApi = true)]
         [HttpGet("Token")]
         [ProducesResponseType(typeof(JWTToken), 200)]
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 403)]
-        public async Task<IActionResult> GetToken([Required, FromQuery]string user, [Required, FromQuery]string password)
+        public async Task<IActionResult> GetToken([Required, FromQuery]UserResource user)
         {
-            if (user == null || password == null) return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+            if (user.Username == null || user.Password == null)
+                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
 
-            Models.Entity.UserModel.User userAccount;
+            User userAccount;
 
             try
             {
-                userAccount = await _service.CheckIfValidAccount(user, password);
+                userAccount = await _service.CheckIfValidAccount(user);
             }
             catch(Exception e)
             {
-                return Forbid(e.Message);
+                return BadRequest(e);
             }
 
-            var claims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Sub, userAccount.Username),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            };
-
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], //issued by
-                _configuration["Jwt:Audience"], //issued for
-                claims, //payload
-                expires: DateTime.Now.AddMinutes(double.Parse(_configuration["Jwt:ExpireTime"])), // valid for 1/2 hour
-                signingCredentials: creds); // signature
-
-            var tokenEncoded = new JwtSecurityTokenHandler().WriteToken(token);
-
-            var result = new JWTToken()
-            {
-                Token = tokenEncoded
-            };
+            var result = _service.GenerateJwtToken(userAccount);
 
             return new OkObjectResult(result);
         }
 
-        [ApiExplorerSettings(IgnoreApi = true)]
+        /// <summary>
+        /// Creates a new user account.
+        /// </summary>
+        /// <remarks>
+        /// There is no need to make an account for accessing data. An account is only necessary for updating data.
+        /// </remarks>
+        /// <param name="user">The user credentials</param>
+        /// <returns>No content</returns>
+        /// <response code="204">Successfully created user</response>
+        /// <response code="400">Username or password is null</response>
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> CreateAccount([Required, FromBody]User user)
+        [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(void), 400)]
+        public async Task<IActionResult> CreateAccount([Required, FromBody]UserResource user)
         {
-            if (user.Username == null || user.Password == null) return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+            if (user.Username == null || user.Password == null)
+                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
 
-            if (!(await _service.CreateAccount(user.Username, user.Password))) return BadRequest();
+            await _service.CreateAccount(user);
+
+            return new NoContentResult();
+        }
+
+        /// <summary>
+        /// Changes the password of the user specified
+        /// </summary>
+        /// <param name="user">The user credentials along with the new password</param>
+        /// <returns>No content</returns>
+        /// <response code="204">Successfully updated user password</response>
+        /// <response code="400">Bad request</response>
+        [Authorize]
+        [HttpPut]
+        [ProducesResponseType(typeof(void), 204)]
+        [ProducesResponseType(typeof(void), 400)]
+        public async Task<IActionResult> ChangePassword([Required, FromBody]UserPasswordChangeResource user)
+        {
+            if (user.Username == null || user.Password == null || user.NewPassword == null)
+                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+
+            try
+            {
+                await _service.ChangePassword(user);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
 
             return new NoContentResult();
         }

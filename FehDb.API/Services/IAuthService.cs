@@ -1,4 +1,5 @@
 ﻿using FehDb.API.Models.Entity.UserModel;
+using FehDb.API.Models.Resource.UserModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,9 @@ namespace FehDb.API.Services
 {
     public interface IAuthService
     {
-        Task<User> CheckIfValidAccount(string name, string password);
-        Task<bool> CreateAccount(string name, string password);
+        JWTToken GenerateJwtToken(User userAccount);
+        Task<User> CheckIfValidAccount(UserResource userEntry);
+        Task CreateAccount(UserResource userEntry);
+        Task ChangePassword(UserPasswordChangeResource userEntry);
     }
 }

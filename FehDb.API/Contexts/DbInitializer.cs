@@ -25,7 +25,6 @@ namespace FehDb.DAL.Contexts
 
                 foreach (var wt in weaponTypes)
                 {
-                    //wt.DateAdded = DateTime.Now;
                     context.WeaponTypes.Add(wt);
                 }
 
@@ -38,7 +37,6 @@ namespace FehDb.DAL.Contexts
 
                 foreach (var mt in movementTypes)
                 {
-                    //mt.DateAdded = DateTime.Now;
                     context.MovementTypes.Add(mt);
                 }
 
