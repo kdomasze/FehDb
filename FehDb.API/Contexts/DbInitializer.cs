@@ -1,6 +1,9 @@
-﻿using FehDb.API.Contexts;
+﻿using FehDb.API.Buisness;
+using FehDb.API.Contexts;
 using FehDb.API.Models;
 using FehDb.API.Models.Entity;
+using FehDb.API.Models.Entity.UserModel;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,7 +15,7 @@ namespace FehDb.DAL.Contexts
 {
     public static class DbInitializer
     {
-        public static void Initialize(FehContext context)
+        public static void Initialize(FehContext context, IConfiguration configuration)
         {
             context.Database.EnsureCreated();
 
@@ -38,6 +41,20 @@ namespace FehDb.DAL.Contexts
                     //mt.DateAdded = DateTime.Now;
                     context.MovementTypes.Add(mt);
                 }
+
+                context.SaveChanges();
+            }
+
+            if (!context.Users.Any())
+            {
+                var admin = new User()
+                {
+                    Username = "Admin"
+                };
+
+                admin.PasswordHash = AuthBusinessLogic.GetHash("Admin", "default", configuration);
+
+                context.Users.Add(admin);
 
                 context.SaveChanges();
             }

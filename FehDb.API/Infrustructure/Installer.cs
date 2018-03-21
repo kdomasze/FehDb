@@ -61,6 +61,7 @@ namespace FehDb.API.Infrustructure
 
             // Services
             services.AddTransient<IWeaponService, WeaponService>();
+            services.AddTransient<IAuthService, AuthService>();
         }
     }
 }

@@ -5,6 +5,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FehDb.API.Models.Resource.UserModel;
+using FehDb.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -17,9 +20,11 @@ namespace FehDb.API.Controllers.V1
     public class AuthController : Controller
     {
         private IConfiguration _configuration;
+        private readonly IAuthService _service;
 
-        public AuthController(IConfiguration Configuration)
+        public AuthController(IAuthService service, IConfiguration Configuration)
         {
+            _service = service;
             _configuration = Configuration;
         }
 
@@ -37,16 +42,24 @@ namespace FehDb.API.Controllers.V1
         [ProducesResponseType(typeof(JWTToken), 200)]
         [ProducesResponseType(typeof(void), 400)]
         [ProducesResponseType(typeof(void), 403)]
-        public IActionResult GetToken([Required, FromQuery]string user, [Required, FromQuery]string password)
+        public async Task<IActionResult> GetToken([Required, FromQuery]string user, [Required, FromQuery]string password)
         {
             if (user == null || password == null) return BadRequest(new ArgumentNullException("The supplied username or password is null."));
 
-            if (user != _configuration["Jwt:adminUser"] || password != _configuration["Jwt:adminPassword"])
-                return Forbid("Incorrect username or password.");
+            Models.Entity.UserModel.User userAccount;
+
+            try
+            {
+                userAccount = await _service.CheckIfValidAccount(user, password);
+            }
+            catch(Exception e)
+            {
+                return Forbid(e.Message);
+            }
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:adminUser"]),
+                new Claim(JwtRegisteredClaimNames.Sub, userAccount.Username),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
 
@@ -68,10 +81,22 @@ namespace FehDb.API.Controllers.V1
 
             return new OkObjectResult(result);
         }
-    }
 
-    public class JWTToken
-    {
-        public string Token { get; set; }
+        [ApiExplorerSettings(IgnoreApi = true)]
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> CreateAccount([Required, FromBody]User user)
+        {
+            if (user.Username == null || user.Password == null) return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+
+            if (!(await _service.CreateAccount(user.Username, user.Password))) return BadRequest();
+
+            return new NoContentResult();
+        }
     }
+}
+
+public class JWTToken
+{
+    public string Token { get; set; }
 }

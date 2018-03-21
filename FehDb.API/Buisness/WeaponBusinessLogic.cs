@@ -92,7 +92,7 @@ namespace FehDb.API.Buisness
                 if (filter.WeaponStatChange.HaveFilter())
                 {
                     weapon = weapon.WhereIf(filter.WeaponStatChange.HPFrom.HasValue, x => x.WeaponStatChange.HP >= filter.WeaponStatChange.HPFrom);
-                    weapon = weapon.WhereIf(filter.WeaponStatChange.HPTo.HasValue, (x => x.WeaponStatChange.HP <= filter.WeaponStatChange.HPTo);
+                    weapon = weapon.WhereIf(filter.WeaponStatChange.HPTo.HasValue, x => x.WeaponStatChange.HP <= filter.WeaponStatChange.HPTo);
 
                     weapon = weapon.WhereIf(filter.WeaponStatChange.MightFrom.HasValue, x => x.WeaponStatChange.Might >= filter.WeaponStatChange.MightFrom);
                     weapon = weapon.WhereIf(filter.WeaponStatChange.MightTo.HasValue, x => x.WeaponStatChange.Might <= filter.WeaponStatChange.MightTo);

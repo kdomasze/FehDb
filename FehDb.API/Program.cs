@@ -26,7 +26,8 @@ namespace FehDb.API
                 try
                 {
                     var context = services.GetRequiredService<FehContext>();
-                    DbInitializer.Initialize(context);
+                    var configuration = services.GetRequiredService<IConfiguration>();
+                    DbInitializer.Initialize(context, configuration);
                 }
                 catch (Exception ex)
                 {

@@ -1,4 +1,5 @@
 ﻿using FehDb.API.Models.Entity;
+using FehDb.API.Models.Entity.UserModel;
 using FehDb.API.Models.Entity.WeaponModel;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,6 +12,8 @@ namespace FehDb.API.Contexts
 {
     public class FehContext : DbContext
     {
+        public virtual DbSet<User> Users { get; set; }
+
         public virtual DbSet<Weapon> Weapons { get; set; }
         public virtual DbSet<WeaponStatChange> StatChanges { get; set; }
         public virtual DbSet<WeaponCost> WeaponCosts { get; set; }
