@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using FehDb.API.Contexts;
+using FehDb.API.Services;
 using FehDb.DAL.Contexts;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -26,8 +27,10 @@ namespace FehDb.API
                 try
                 {
                     var context = services.GetRequiredService<FehContext>();
+                    var weaponService = services.GetService<IWeaponService>();
+                    var authService = services.GetService<IAuthService>();
                     var configuration = services.GetRequiredService<IConfiguration>();
-                    DbInitializer.Initialize(context, configuration);
+                    DbInitializer.Initialize(context, weaponService, authService, configuration).Wait();
                 }
                 catch (Exception ex)
                 {

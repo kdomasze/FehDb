@@ -11,7 +11,7 @@ namespace FehDb.API.Extensions
     // Source: http://gunnarpeipman.com/2017/01/ef-core-paging/
     public static class PagedResultExtensions
     {
-        public static async Task<PagedResult<T>> GetPaged<T>(this IQueryable<T> query, int page, int pageSize) where T : class
+        public static PagedResult<T> GetPaged<T>(this IQueryable<T> query, int page, int pageSize) where T : class
         {
             var result = new PagedResult<T>();
             result.CurrentPage = page;
@@ -22,7 +22,7 @@ namespace FehDb.API.Extensions
             result.PageCount = (int)Math.Ceiling(pageCount);
 
             var skip = (page - 1) * pageSize;
-            result.Results = await query.Skip(skip).Take(pageSize).ToListAsync();
+            result.Results = query.Skip(skip).Take(pageSize).ToList();
 
             return result;
         }

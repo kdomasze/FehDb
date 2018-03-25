@@ -12,9 +12,11 @@ namespace FehDb.API.Contexts
 {
     public class FehContext : DbContext
     {
+        #region DbSets
         public virtual DbSet<User> Users { get; set; }
 
         public virtual DbSet<Weapon> Weapons { get; set; }
+        public virtual DbSet<WeaponUpgrade> WeaponUpgrades { get; set; }
         public virtual DbSet<WeaponStatChange> StatChanges { get; set; }
         public virtual DbSet<WeaponCost> WeaponCosts { get; set; }
         public virtual DbSet<WeaponEffectiveAgainst> WeaponEffectiveAgainsts { get; set; }
@@ -24,6 +26,7 @@ namespace FehDb.API.Contexts
 
         public virtual DbSet<WeaponType> WeaponTypes { get; set; }
         public virtual DbSet<MovementType> MovementTypes { get; set; }
+        #endregion
 
         public FehContext(DbContextOptions options) : base(options) { }
         public FehContext() { }
@@ -49,8 +52,21 @@ namespace FehDb.API.Contexts
                 .HasOne(w => w.WeaponType)
                 .WithMany()
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<WeaponUpgrade>()
+                .HasOne(wu => wu.PreviousWeapon)
+                .WithMany()
+                .HasForeignKey(wu => wu.PreviousWeaponID)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<WeaponUpgrade>()
+                .HasOne(wu => wu.NextWeapon)
+                .WithMany()
+                .HasForeignKey(wu => wu.NextWeaponID)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
+        #region Function overrides
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
         {
             AddTimestamps();
@@ -89,5 +105,6 @@ namespace FehDb.API.Contexts
                 ((BaseEntity)entity.Entity).DateModified = DateTime.UtcNow;
             }
         }
+        #endregion
     }
 }

@@ -16,7 +16,7 @@ namespace FehDb.API.Test.Extentions
     public class BaseRepositoryTest
     {
         [TestMethod]
-        public async Task GetAllAsyncTest()
+        public void GetAllTest()
         {
             var data = new List<Weapon>()
             {
@@ -46,7 +46,7 @@ namespace FehDb.API.Test.Extentions
 
             var repo = new BaseRepository<Weapon>(mockContext.Object);
 
-            var result = await repo.GetAllAsync(new Models.Binding.Query(), new Models.Binding.BaseFilter());
+            var result = repo.GetAll(new Models.Binding.Query(), new Models.Binding.BaseFilter());
 
             Assert.AreEqual(result.Results.Count, 5);
         }
@@ -82,7 +82,7 @@ namespace FehDb.API.Test.Extentions
 
             var repo = new BaseRepository<Weapon>(mockContext.Object);
 
-            var result = await repo.GetByIdAsync(2);
+            var result = await repo.GetById(2);
 
             Assert.AreEqual(result.ID, 2);
         }

@@ -16,7 +16,7 @@ namespace FehDb.API.Repositories
     {
         public WeaponRepository(FehContext context) : base(context) {}
 
-        public override async Task<PagedResult<Weapon>> GetAllAsync(Query query, BaseFilter filter)
+        public override PagedResult<Weapon> GetAll(Query query, BaseFilter filter)
         {
             IQueryable<Weapon> weaponSet = _entities
                 .Include(w => w.WeaponType)
@@ -26,10 +26,10 @@ namespace FehDb.API.Repositories
 
             weaponSet = WeaponBusinessLogic.Parse(weaponSet, query, (WeaponFilter)filter);
 
-            return await weaponSet.GetPaged(query.Page, query.PageSize);
+            return weaponSet.GetPaged(query.Page, query.PageSize);
         }
 
-        public override async Task<Weapon> GetByIdAsync(int id)
+        public override Weapon GetById(int id)
         {
             IQueryable<Weapon> weaponSet = _entities
                 .Include(w => w.WeaponType)
@@ -37,7 +37,7 @@ namespace FehDb.API.Repositories
                 .Include(w => w.WeaponStatChange)
                 .Include(w => w.WeaponEffectiveAgainst);
 
-            return await weaponSet.SingleOrDefaultAsync(s => s.ID == id);
+            return weaponSet.SingleOrDefault(s => s.ID == id);
         }
 
         public override async Task Update(Weapon entity)

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using FehDb.API.Buisness;
 using FehDb.API.Contexts;
+using FehDb.API.Extensions;
 using FehDb.API.Models;
 using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
@@ -17,6 +19,7 @@ namespace FehDb.API.Services
         private readonly IMapper _mapper;
 
         private WeaponRepository _weaponRepository;
+        private WeaponUpgradeRepository _weaponUpgradeRepository;
         private WeaponTypeRepository _weaponTypeRepository;
         private BaseRepository<WeaponCost> _weaponCostRepository;
 
@@ -28,6 +31,7 @@ namespace FehDb.API.Services
             _mapper = mapper;
 
             _weaponRepository = new WeaponRepository(context);
+            _weaponUpgradeRepository = new WeaponUpgradeRepository(context);
             _weaponTypeRepository = new WeaponTypeRepository(context);
             _weaponCostRepository = new BaseRepository<WeaponCost>(context);
 
@@ -36,18 +40,19 @@ namespace FehDb.API.Services
 
         }
 
-    public async Task<PagedResult<WeaponResource>> GetWeapons(Query query, WeaponFilter filter)
+        #region Weapons
+        public PagedResult<WeaponResource> GetWeapons(Query query, WeaponFilter filter)
         {
-            var weaponsEnumerable = await _weaponRepository.GetAllAsync(query, filter);
+            var weaponsEnumerable = _weaponRepository.GetAll(query, filter);
             
             var result = _mapper.Map<PagedResult<WeaponResource>>(weaponsEnumerable);
 
             return result;
         }
 
-        public async Task<WeaponResource> GetWeaponByID(int ID)
+        public WeaponResource GetWeaponByID(int ID)
         {
-            var weapon = await _weaponRepository.GetByIdAsync(ID);
+            var weapon = _weaponRepository.GetById(ID);
 
             if (weapon == null) throw new Exception("Weapon matching ID not found.");
 
@@ -75,6 +80,28 @@ namespace FehDb.API.Services
             await _weaponRepository.SaveChanges();
 
             return _mapper.Map<WeaponResource>(weapon);
+        }
+
+        public async Task CreateFromList(IEnumerable<WeaponResource> entity)
+        {
+            var weaponList = _mapper.Map<IEnumerable<Weapon>>(entity);
+
+            foreach (var weapon in weaponList)
+            {
+                // Ensure WeaponType is supplied
+                if (weapon.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
+
+                var weaponType = await _weaponTypeRepository.GetByWeaponType(weapon.WeaponType.Color, weapon.WeaponType.Arm);
+                weapon.WeaponTypeID = weaponType.ID;
+                weapon.WeaponType = null;
+
+                // Ensure WeaponCost is supplied
+                if (weapon.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
+
+                // Insert and save
+                await _weaponRepository.Insert(weapon);
+            }
+            await _weaponRepository.SaveChanges();
         }
 
         public async Task Update(int ID, WeaponResource resource)
@@ -110,7 +137,7 @@ namespace FehDb.API.Services
 
         public async Task Delete(int ID)
         {
-            var weapon = await _weaponRepository.GetByIdAsync(ID);
+            var weapon = _weaponRepository.GetById(ID);
 
             if (weapon == null) throw new Exception("Weapon matching ID not found.");
 
@@ -118,5 +145,66 @@ namespace FehDb.API.Services
             _weaponRepository.Delete(weapon);
             await _weaponRepository.SaveChanges();
         }
+        #endregion
+
+        #region Weapon Upgrades
+        public List<WeaponResource> GetWeaponUpgrades(int weaponID)
+        {
+            var weaponIds = _weaponUpgradeRepository.GetUpgradesForWeaponOfId(weaponID).Select(wu => wu.NextWeaponID);
+
+            List<Weapon> weaponList = new List<Weapon>();
+
+            foreach (var id in weaponIds)
+            {
+                weaponList.Add(_weaponRepository.GetById(id));
+            }
+
+            var result = _mapper.Map<List<WeaponResource>>(weaponList);
+
+            return result;
+        }
+
+        public async Task<WeaponUpgradeResource> CreateWeaponUpgrades(WeaponUpgradeResource entity)
+        {
+            var weapon = _mapper.Map<WeaponUpgrade>(entity);
+
+            // Insert and save
+            await _weaponUpgradeRepository.Insert(weapon);
+            await _weaponUpgradeRepository.SaveChanges();
+
+            return _mapper.Map<WeaponUpgradeResource>(weapon);
+        }
+
+        public async Task UpdateWeaponUpgrades(int ID, WeaponUpgradeResource resource)
+        {
+            var entity = _mapper.Map<WeaponUpgrade>(resource);
+
+            // Update weaponUpgrade and save
+            await _weaponUpgradeRepository.Update(entity);
+            await _weaponRepository.SaveChanges();
+        }
+
+        public async Task DeleteWeaponUpgrades(int ID)
+        {
+            var weaponUpgrade = _weaponUpgradeRepository.GetById(ID);
+
+            if (weaponUpgrade == null) throw new Exception("Weapon matching ID not found.");
+
+            // Delete and save
+            _weaponUpgradeRepository.Delete(weaponUpgrade);
+            await _weaponRepository.SaveChanges();
+        }
+
+        public async Task DeleteWeaponUpgradesByWeapon(WeaponUpgradeResource weaponUpgradeResource)
+        {
+            var weaponUpgrade = await _weaponUpgradeRepository.GetUpgradeForWeaponPair(weaponUpgradeResource.PreviousWeaponID, weaponUpgradeResource.NextWeaponID);
+
+            if (weaponUpgrade == null) throw new Exception("Weapon matching ID not found.");
+
+            // Delete and save
+            _weaponUpgradeRepository.Delete(weaponUpgrade);
+            await _weaponRepository.SaveChanges();
+        }
+        #endregion
     }
 }

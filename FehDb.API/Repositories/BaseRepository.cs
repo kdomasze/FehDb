@@ -23,14 +23,14 @@ namespace FehDb.API.Repositories
             _entities = context.Set<T>();
         }
 
-        public virtual async Task<PagedResult<T>> GetAllAsync(Query query, BaseFilter filter)
+        public virtual PagedResult<T> GetAll(Query query, BaseFilter filter)
         {
-            return await _entities.GetPaged(query.Page, query.PageSize);
+            return _entities.GetPaged(query.Page, query.PageSize);
         }
 
-        public virtual async Task<T> GetByIdAsync(int id)
+        public virtual T GetById(int id)
         {
-            return await _entities.SingleOrDefaultAsync(s => s.ID == id);
+            return _entities.SingleOrDefault(s => s.ID == id);
         }
 
         public async Task Insert(T entity)

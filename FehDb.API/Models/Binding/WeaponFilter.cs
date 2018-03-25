@@ -27,17 +27,29 @@ namespace FehDb.API.Models.Binding
 
         public bool HaveFilter()
         {
-            return WeaponType.HaveFilter() ||
-                   WeaponType.HaveFilter() ||
-                   WeaponStatChange.HaveFilter() ||
-                   !string.IsNullOrEmpty(Name) ||
-                   MightFrom != null ||
-                   MightTo != null ||
-                   RangeFrom != null ||
-                   RangeTo != null ||
-                   Effect != null ||
-                   Exclusive != null ||
-                   Refined != null;
+            var check = !string.IsNullOrEmpty(Name) ||
+                    MightFrom != null ||
+                    MightTo != null ||
+                    RangeFrom != null ||
+                    RangeTo != null ||
+                    Effect != null ||
+                    Exclusive != null ||
+                    Refined != null;
+
+            if (WeaponType != null)
+            {
+                check = check || WeaponType.HaveFilter();
+            }
+            if (WeaponCost != null)
+            {
+                check = check || WeaponCost.HaveFilter();
+            }
+            if (WeaponStatChange != null)
+            {
+                check = check || WeaponStatChange.HaveFilter();
+            }
+
+            return check;
         }
     }
 }

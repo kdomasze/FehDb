@@ -74,7 +74,7 @@ namespace FehDb.API.Buisness
 
                 weapon = weapon.WhereIf(filter.Refined.HasValue, x => x.Refined == filter.Refined);
 
-                if (filter.WeaponCost.HaveFilter())
+                if (filter.WeaponCost != null && filter.WeaponCost.HaveFilter())
                 {
                     weapon = weapon.WhereIf(filter.WeaponCost.SpCostFrom.HasValue, x => x.WeaponCost.SpCost >= filter.WeaponCost.SpCostFrom);
                     weapon = weapon.WhereIf(filter.WeaponCost.SpCostTo.HasValue, x => x.WeaponCost.SpCost <= filter.WeaponCost.SpCostTo);
@@ -89,7 +89,7 @@ namespace FehDb.API.Buisness
                     weapon = weapon.WhereIf(filter.WeaponCost.DewTo.HasValue, x => x.WeaponCost.Dew <= filter.WeaponCost.DewTo);
                 }
 
-                if (filter.WeaponStatChange.HaveFilter())
+                if (filter.WeaponStatChange != null && filter.WeaponStatChange.HaveFilter())
                 {
                     weapon = weapon.WhereIf(filter.WeaponStatChange.HPFrom.HasValue, x => x.WeaponStatChange.HP >= filter.WeaponStatChange.HPFrom);
                     weapon = weapon.WhereIf(filter.WeaponStatChange.HPTo.HasValue, x => x.WeaponStatChange.HP <= filter.WeaponStatChange.HPTo);
@@ -107,7 +107,7 @@ namespace FehDb.API.Buisness
                     weapon = weapon.WhereIf(filter.WeaponStatChange.ResistanceTo.HasValue, x => x.WeaponStatChange.Resistance <= filter.WeaponStatChange.ResistanceTo);
                 }
 
-                if (filter.WeaponType.HaveFilter())
+                if (filter.WeaponType != null && filter.WeaponType.HaveFilter())
                 {
                     weapon = weapon.WhereIf(filter.WeaponType.WeaponColor.HasValue, x => x.WeaponType.Color == filter.WeaponType.WeaponColor);
                     weapon = weapon.WhereIf(filter.WeaponType.WeaponArm.HasValue, x => x.WeaponType.Arm == filter.WeaponType.WeaponArm);

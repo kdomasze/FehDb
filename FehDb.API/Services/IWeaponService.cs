@@ -11,10 +11,17 @@ namespace FehDb.API.Services
 {
     public interface IWeaponService
     {
-        Task<PagedResult<WeaponResource>> GetWeapons(Query query, WeaponFilter filter);
-        Task<WeaponResource> GetWeaponByID(int ID);
+        PagedResult<WeaponResource> GetWeapons(Query query, WeaponFilter filter);
+        WeaponResource GetWeaponByID(int ID);
         Task<WeaponResource> Create(WeaponResource entity);
+        Task CreateFromList(IEnumerable<WeaponResource> entity);
         Task Update(int ID, WeaponResource resource);
         Task Delete(int ID);
+
+        List<WeaponResource> GetWeaponUpgrades(int weaponID);
+        Task<WeaponUpgradeResource> CreateWeaponUpgrades(WeaponUpgradeResource entity);
+        Task UpdateWeaponUpgrades(int ID, WeaponUpgradeResource resource);
+        Task DeleteWeaponUpgrades(int ID);
+        Task DeleteWeaponUpgradesByWeapon(WeaponUpgradeResource weaponUpgradeResource);
     }
 }

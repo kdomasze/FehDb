@@ -17,6 +17,9 @@ namespace FehDb.API.Infrustructure
             CreateMap<Weapon, WeaponResource>();
             CreateMap<WeaponResource, Weapon>();
 
+            CreateMap<WeaponUpgrade, WeaponUpgradeResource>();
+            CreateMap<WeaponUpgradeResource, WeaponUpgrade>();
+
             CreateMap<WeaponCost, WeaponCostResource>();
             CreateMap<WeaponCostResource, WeaponCost>();
 

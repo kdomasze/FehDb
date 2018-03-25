@@ -19,7 +19,7 @@ namespace FehDb.API.Test.Extentions
     public class PagedResultExtensionsTest
     {
         [TestMethod]
-        public async Task GetPagedTest()
+        public void GetPagedTest()
         {
             var data = new List<Weapon>()
             {
@@ -49,7 +49,7 @@ namespace FehDb.API.Test.Extentions
 
             var entity = mockContext.Object.Set<Weapon>();
 
-            PagedResult<Weapon> pagedTestData = await entity.GetPaged(0, 2);
+            PagedResult<Weapon> pagedTestData = entity.GetPaged(0, 2);
 
             Assert.AreEqual(pagedTestData.Results.Count, 2, "1");
             Assert.IsNotNull(pagedTestData.Results.SingleOrDefault(x => x.ID == 1), "2");
