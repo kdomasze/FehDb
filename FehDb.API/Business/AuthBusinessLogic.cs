@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FehDb.API.Buisness
+namespace FehDb.API.Business
 {
     public class AuthBusinessLogic
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace FehDb.API.Buisness
+namespace FehDb.API.Business
 {
     public class WeaponBusinessLogic
     {

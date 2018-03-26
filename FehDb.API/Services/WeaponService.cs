@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using FehDb.API.Buisness;
+using FehDb.API.Business;
 using FehDb.API.Contexts;
 using FehDb.API.Extensions;
 using FehDb.API.Models;

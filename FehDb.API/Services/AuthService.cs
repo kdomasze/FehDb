@@ -1,4 +1,4 @@
-﻿using FehDb.API.Buisness;
+﻿using FehDb.API.Business;
 using FehDb.API.Contexts;
 using FehDb.API.Models.Entity.UserModel;
 using FehDb.API.Models.Resource.UserModel;
