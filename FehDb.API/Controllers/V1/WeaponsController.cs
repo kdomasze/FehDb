@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FehDb.API.Infrustructure.Exceptions;
 using FehDb.API.Models;
 using FehDb.API.Models.Binding;
 using FehDb.API.Models.Resource.WeaponModel;
@@ -53,18 +54,12 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 404)]
         public IActionResult GetByID(int id)
         {
-            if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
+            if (id < 1)
+                throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
 
             WeaponResource result;
 
-            try
-            {
-                result = _service.GetWeaponByID(id);
-            }
-            catch(Exception e)
-            {
-                return NotFound(e);
-            }
+            result = _service.GetWeaponByID(id);
 
             return Ok(result);
         }
@@ -84,19 +79,12 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 403)]
         public async Task<IActionResult> Create([FromBody]WeaponResource resource)
         {
-            if (resource == null) return BadRequest("Request body is null.");
-            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
+            if (resource == null) throw new BadArguementException("Request body is null.");
+            if (!ModelState.IsValid) throw new InvalidModelException(ModelState.ValidationState.ToString());
 
             WeaponResource result;
 
-            try
-            {
-                result = await _service.Create(resource);
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            result = await _service.Create(resource);
             
             return CreatedAtRoute("GetWeapon", new { id = result.ID }, result);
         }
@@ -116,17 +104,10 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 403)]
         public async Task<IActionResult> CreateFromList([FromBody]IEnumerable<WeaponResource> resource)
         {
-            if (resource == null) return BadRequest("Request body is null.");
-            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
-            
-            try
-            {
-                await _service.CreateFromList(resource);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            if (resource == null) throw new BadArguementException("Request body is null.");
+            if (!ModelState.IsValid) throw new InvalidModelException(ModelState.ValidationState.ToString());
+
+            await _service.CreateFromList(resource);
 
             return CreatedAtRoute("GetAllWeapons", new { });
         }
@@ -147,19 +128,12 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> Update(int id, [FromBody] WeaponResource resource)
         {
-            if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
-            if (resource == null) return BadRequest(new ArgumentNullException("resource", "Supplied WeaponResource is null."));
-            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
-            if (id != resource.ID) return BadRequest(new ArgumentNullException("resource.ID", "Supplied WeaponResource.ID is null."));
+            if (id < 1) throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
+            if (resource == null) throw new ArgumentNullException("resource", "Supplied WeaponResource is null.");
+            if (!ModelState.IsValid) throw new InvalidModelException(ModelState.ValidationState.ToString());
+            if (id != resource.ID) throw new ArgumentNullException("resource.ID", "Supplied WeaponResource.ID is null.");
 
-            try
-            {
-                await _service.Update(id, resource);
-            }
-            catch(Exception e)
-            {
-                return BadRequest(e);
-            }
+            await _service.Update(id, resource);
 
             return NoContent();
         }
@@ -179,7 +153,7 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> Delete(int id)
         {
-            if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
+            if (id < 1) throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
 
             try
             {
@@ -205,16 +179,11 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(List<WeaponResource>), 200)]
         public IActionResult GetAllWeaponUpgrades(int id)
         {
+            if (id < 1) throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
+
             List<WeaponResource> result;
 
-            try
-            {
-                result = _service.GetWeaponUpgrades(id);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            result = _service.GetWeaponUpgrades(id);
 
             return Ok(result);
         }
@@ -234,19 +203,12 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 403)]
         public async Task<IActionResult> CreateWeaponUpgrades([FromBody]WeaponUpgradeResource resource)
         {
-            if (resource == null) return BadRequest("Request body is null.");
-            if (!ModelState.IsValid) return BadRequest("Request body is invalid.");
+            if (resource == null) throw new ArgumentNullException("resource", "Supplied WeaponUpgradeResource is null.");
+            if (!ModelState.IsValid) throw new InvalidModelException(ModelState.ValidationState.ToString());
 
             WeaponUpgradeResource result;
 
-            try
-            {
-                result = await _service.CreateWeaponUpgrades(resource);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            result = await _service.CreateWeaponUpgrades(resource);
 
             return CreatedAtRoute("GetAllWeaponUpgrades", new { id = result.PreviousWeaponID }, result);
         }
@@ -267,19 +229,12 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> UpdateWeaponUpgrades(int id, [FromBody] WeaponUpgradeResource resource)
         {
-            if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
-            if (resource == null) return BadRequest(new ArgumentNullException("resource", "Supplied WeaponResource is null."));
-            if (!ModelState.IsValid) return BadRequest(new Exception("Request body is invalid."));
-            if (id != resource.ID) return BadRequest(new Exception($"resource.ID does not equal id. resource.ID: {resource.ID}, id: {id}"));
+            if (id < 1) throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
+            if (resource == null) throw new ArgumentNullException("resource", "Supplied WeaponUpgradeResource is null.");
+            if (!ModelState.IsValid) throw new InvalidModelException(ModelState.ValidationState.ToString());
+            if (id != resource.ID) throw new ArgumentNullException("resource.ID", "Supplied WeaponUpgradeResource.ID is null.");
 
-            try
-            {
-                await _service.UpdateWeaponUpgrades(id, resource);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            await _service.UpdateWeaponUpgrades(id, resource);
 
             return NoContent();
         }
@@ -299,16 +254,9 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 404)]
         public async Task<IActionResult> DeleteWeaponUpgrades(int id)
         {
-            if (id < 1) return BadRequest(new Exception($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1)."));
+            if (id < 1) throw new BadArguementException($"Supplied ID is below starting value (Supplied: {id}, Required: id >= 1).");
 
-            try
-            {
-                await _service.DeleteWeaponUpgrades(id);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            await _service.DeleteWeaponUpgrades(id);
 
             return NoContent();
         }
@@ -316,7 +264,7 @@ namespace FehDb.API.V1.Controllers
         /// <summary>
         /// Deletes a Weapon Upgrade
         /// </summary>
-        /// <param name="weaponUpgrade">The resource defining which weapon upgrade previous/next pair to delete</param>
+        /// <param name="resource">The resource defining which weapon upgrade previous/next pair to delete</param>
         /// <returns>No content</returns>
         /// <response code="200">Successfully deleted Weapon Upgrade</response>
         /// <response code="403">Supplied JWT token invalid</response>
@@ -326,18 +274,11 @@ namespace FehDb.API.V1.Controllers
         [ProducesResponseType(typeof(void), 204)]
         [ProducesResponseType(typeof(void), 403)]
         [ProducesResponseType(typeof(void), 404)]
-        public async Task<IActionResult> DeleteWeaponUpgradeByWeapons([FromBody] WeaponUpgradeResource weaponUpgrade)
+        public async Task<IActionResult> DeleteWeaponUpgradeByWeapons([FromBody] WeaponUpgradeResource resource)
         {
-            if (weaponUpgrade == null) return BadRequest(new ArgumentNullException("Supplied weaponUpgrade is null."));
+            if (resource == null) throw new ArgumentNullException("resource", "Supplied WeaponUpgradeResource is null.");
 
-            try
-            {
-                await _service.DeleteWeaponUpgradesByWeapon(weaponUpgrade);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+            await _service.DeleteWeaponUpgradesByWeapon(resource);
 
             return NoContent();
         }

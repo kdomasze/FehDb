@@ -2,6 +2,8 @@
 using FehDb.API.Business;
 using FehDb.API.Contexts;
 using FehDb.API.Extensions;
+using FehDb.API.Infrustructure.Exceptions;
+using FehDb.API.Infrustructure.Exceptions.Weapons;
 using FehDb.API.Models;
 using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
@@ -54,7 +56,7 @@ namespace FehDb.API.Services
         {
             var weapon = _weaponRepository.GetById(ID);
 
-            if (weapon == null) throw new Exception("Weapon matching ID not found.");
+            if (weapon == null) throw new WeaponNotFoundException("Weapon matching ID not found.");
 
             var result = _mapper.Map<WeaponResource>(weapon);
 
@@ -66,14 +68,14 @@ namespace FehDb.API.Services
             var weapon = _mapper.Map<Weapon>(entity);
             
             // Ensure WeaponType is supplied
-            if (weapon.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
+            if (weapon.WeaponType == null) throw new InvalidModelException("weapon.WeaponType", "Null");
 
             var weaponType = await _weaponTypeRepository.GetByWeaponType(weapon.WeaponType.Color, weapon.WeaponType.Arm);
             weapon.WeaponTypeID = weaponType.ID;
             weapon.WeaponType = null;
             
             // Ensure WeaponCost is supplied
-            if(weapon.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
+            if(weapon.WeaponCost == null) throw new InvalidModelException("weapon.WeaponCost", "Null");
             
             // Insert and save
             await _weaponRepository.Insert(weapon);
@@ -89,14 +91,14 @@ namespace FehDb.API.Services
             foreach (var weapon in weaponList)
             {
                 // Ensure WeaponType is supplied
-                if (weapon.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
+                if (weapon.WeaponType == null) throw new InvalidModelException("weapon.WeaponType", "Null");
 
                 var weaponType = await _weaponTypeRepository.GetByWeaponType(weapon.WeaponType.Color, weapon.WeaponType.Arm);
                 weapon.WeaponTypeID = weaponType.ID;
                 weapon.WeaponType = null;
 
                 // Ensure WeaponCost is supplied
-                if (weapon.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
+                if (weapon.WeaponCost == null) throw new InvalidModelException("weapon.WeaponCost", "Null");
 
                 // Insert and save
                 await _weaponRepository.Insert(weapon);
@@ -109,14 +111,14 @@ namespace FehDb.API.Services
             var entity = _mapper.Map<Weapon>(resource);
             
             // Ensure WeaponType is supplied
-            if (entity.WeaponType == null) throw new ArgumentNullException("weapon.WeaponType", "The specified WeaponType is null.");
+            if (entity.WeaponType == null) throw new InvalidModelException("weapon.WeaponType", "Null");
 
             var weaponType = await _weaponTypeRepository.GetByWeaponType(entity.WeaponType.Color, entity.WeaponType.Arm);
             entity.WeaponTypeID = weaponType.ID;
             entity.WeaponType = null;
 
             // Ensure WeaponCost is supplied
-            if (entity.WeaponCost == null) throw new ArgumentNullException("weapon.WeaponCost", "The specified WeaponCost is null.");
+            if (entity.WeaponCost == null) throw new InvalidModelException("weapon.WeaponCost", "Null");
 
             // Update weapon
             await _weaponRepository.Update(entity);
@@ -139,7 +141,7 @@ namespace FehDb.API.Services
         {
             var weapon = _weaponRepository.GetById(ID);
 
-            if (weapon == null) throw new Exception("Weapon matching ID not found.");
+            if (weapon == null) throw new WeaponNotFoundException("Weapon matching ID not found.");
 
             // Delete and save
             _weaponRepository.Delete(weapon);
@@ -188,7 +190,7 @@ namespace FehDb.API.Services
         {
             var weaponUpgrade = _weaponUpgradeRepository.GetById(ID);
 
-            if (weaponUpgrade == null) throw new Exception("Weapon matching ID not found.");
+            if (weaponUpgrade == null) throw new WeaponUpgradeNotFoundException("Weapon matching ID not found.");
 
             // Delete and save
             _weaponUpgradeRepository.Delete(weaponUpgrade);
@@ -199,7 +201,7 @@ namespace FehDb.API.Services
         {
             var weaponUpgrade = await _weaponUpgradeRepository.GetUpgradeForWeaponPair(weaponUpgradeResource.PreviousWeaponID, weaponUpgradeResource.NextWeaponID);
 
-            if (weaponUpgrade == null) throw new Exception("Weapon matching ID not found.");
+            if (weaponUpgrade == null) throw new WeaponUpgradeNotFoundException("Weapon matching ID not found.");
 
             // Delete and save
             _weaponUpgradeRepository.Delete(weaponUpgrade);

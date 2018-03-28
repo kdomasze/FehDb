@@ -46,16 +46,16 @@ namespace FehDb.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            var jsonExceptionMiddleware = new JsonExceptionMiddleware(
-                app.ApplicationServices.GetRequiredService<IHostingEnvironment>());
-                app.UseExceptionHandler(new ExceptionHandlerOptions { ExceptionHandler = jsonExceptionMiddleware.Invoke });
-
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/api/v1/Error");
             }
             
             app.UseSwagger();

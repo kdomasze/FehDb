@@ -1,5 +1,6 @@
 ﻿using FehDb.API.Business;
 using FehDb.API.Contexts;
+using FehDb.API.Infrustructure.Auth.Exceptions;
 using FehDb.API.Models.Entity.UserModel;
 using FehDb.API.Models.Resource.UserModel;
 using FehDb.API.Repositories;
@@ -58,16 +59,17 @@ namespace FehDb.API.Services
 
             if (!AuthBusinessLogic.CheckWaitPeriod(user, _configuration))
             {
-                throw new InvalidOperationException("User must wait before attempting to login.");
+                // TODO: Implement timeout time
+                throw new UserLoginTimeoutException("{0} seconds.");
             }
 
-            if (user == null) throw new Exception("Invalid username or password.");
+            if (user == null) throw new WrongUserCredentialsException("Invalid username or password.");
 
             if (!AuthBusinessLogic.CheckIfValidPassword(user, userEntry.Password, _configuration))
             {
                 _userRepository.MarkFailedLogin(user);
                 await _userRepository.SaveChanges();
-                throw new Exception("Invalid username or password.");
+                throw new WrongUserCredentialsException("Invalid username or password.");
             }
 
             _userRepository.MarkSuccessfulLogin(user);
@@ -94,16 +96,17 @@ namespace FehDb.API.Services
 
             if (!AuthBusinessLogic.CheckWaitPeriod(user, _configuration))
             {
-                throw new InvalidOperationException("User must wait before attempting to login.");
+                // TODO: Implement timeout time
+                throw new UserLoginTimeoutException("{0} seconds.");
             }
 
-            if (user == null) throw new Exception("Invalid username or password.");
+            if (user == null) throw new WrongUserCredentialsException("Invalid username or password.");
 
             if (!AuthBusinessLogic.CheckIfValidPassword(user, userEntry.Password, _configuration))
             {
                 _userRepository.MarkFailedLogin(user);
                 await _userRepository.SaveChanges();
-                throw new Exception("Invalid username or password.");
+                throw new WrongUserCredentialsException("Invalid username or password.");
             }
 
             user.PasswordHash = AuthBusinessLogic.GetHash(userEntry.Username, userEntry.NewPassword, _configuration);

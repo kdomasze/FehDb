@@ -11,8 +11,6 @@ namespace FehDb.API.Models
     // Source: https://github.com/nbarbettini/BeautifulRestApi/blob/master/src/Models/ApiError.cs
     public sealed class ApiError
     {
-        public const string ModelBindingErrorMessage = "Invalid parameters.";
-
         public ApiError()
         {
         }
@@ -22,27 +20,11 @@ namespace FehDb.API.Models
             Message = message;
         }
 
-        /// <summary>
-        /// Creates a new <see cref="ApiError"/> from the result of a model binding attempt.
-        /// The first model binding error (if any) is placed in the <see cref="Detail"/> property.
-        /// </summary>
-        /// <param name="modelState"></param>
-        public ApiError(ModelStateDictionary modelState)
+        public ApiError(Exception exception)
         {
-            Message = ModelBindingErrorMessage;
-
-            Detail = modelState
-                .FirstOrDefault(x => x.Value.Errors.Any())
-                .Value?.Errors?.FirstOrDefault()?.ErrorMessage;
+            Message = exception.Message;
         }
 
         public string Message { get; set; }
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string Detail { get; set; }
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.Ignore)]
-        [DefaultValue("")]
-        public string StackTrace { get; set; }
     }
 }

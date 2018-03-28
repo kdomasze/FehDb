@@ -5,6 +5,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FehDb.API.Infrustructure.Auth.Exceptions;
+using FehDb.API.Models;
 using FehDb.API.Models.Entity.UserModel;
 using FehDb.API.Models.Resource.UserModel;
 using FehDb.API.Services;
@@ -44,18 +46,9 @@ namespace FehDb.API.Controllers.V1
         public async Task<IActionResult> GetToken([Required, FromQuery]UserResource user)
         {
             if (user.Username == null || user.Password == null)
-                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+                throw new WrongUserCredentialsException("The supplied username or password is null.");
 
-            User userAccount;
-
-            try
-            {
-                userAccount = await _service.CheckIfValidAccount(user);
-            }
-            catch(Exception e)
-            {
-                return BadRequest(e);
-            }
+            User userAccount = await _service.CheckIfValidAccount(user);
 
             var result = _service.GenerateJwtToken(userAccount);
 
@@ -79,7 +72,7 @@ namespace FehDb.API.Controllers.V1
         public async Task<IActionResult> CreateAccount([Required, FromBody]UserResource user)
         {
             if (user.Username == null || user.Password == null)
-                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
+                throw new WrongUserCredentialsException("The supplied username or password is null.");
 
             await _service.CreateAccount(user);
 
@@ -100,16 +93,9 @@ namespace FehDb.API.Controllers.V1
         public async Task<IActionResult> ChangePassword([Required, FromBody]UserPasswordChangeResource user)
         {
             if (user.Username == null || user.Password == null || user.NewPassword == null)
-                return BadRequest(new ArgumentNullException("The supplied username or password is null."));
-
-            try
-            {
-                await _service.ChangePassword(user);
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e);
-            }
+                throw new WrongUserCredentialsException("The supplied username or password is null.");
+           
+            await _service.ChangePassword(user);
 
             return new NoContentResult();
         }
