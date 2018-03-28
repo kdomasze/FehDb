@@ -1,0 +1,119 @@
+﻿@page
+@model FehDb.Web.Pages.Weapons.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using FehDb.Web.Helpers
+
+<h2>Index</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Name), (string)ViewData["NameSortParam"], Model.CurrentPage)
+            </th>
+            <th>
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Might), (string)ViewData["MightSortParam"], Model.CurrentPage)
+            </th>
+            <th>
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Range), (string)ViewData["RangeSortParam"], Model.CurrentPage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.Results[0].Effect)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.Results[0].Refined)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons.Results[0].WeaponType)
+            </th>
+            <th>
+                Links
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Weapons.PageSize; i++)
+        {
+            <tr>
+                <td>
+                    @Model.Weapons.Results[i].Name
+                </td>
+                <td>
+                    @Model.Weapons.Results[i].Might
+                </td>
+                <td>
+                    @Model.Weapons.Results[i].Range
+                </td>
+                <td>
+                    @Model.Weapons.Results[i].Effect
+                </td>
+                <td>
+                    @Model.Weapons.Results[i].Refined
+                </td>
+                <td>
+                    @Model.Weapons.Results[i].WeaponType.ToString()
+                </td>
+                <td>
+                    <a>Details</a> | <a>Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @if (Model.Weapons.CurrentPage == 1)
+            {
+                <li class="disabled">
+                    <span>
+                        <span aria-hidden="true">&laquo;</span>
+                    </span>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a asp-page="./Index" asp-route-SortBy=@Model.CurrentSorting asp-route-pageIndex="@(Model.Weapons.CurrentPage - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+
+            @for (int i = 1; i <= Model.Weapons.PageCount; i++)
+            {
+                if (Model.Weapons.CurrentPage == i)
+                {
+                    <li class="active">
+                        <a asp-page="./Index" asp-route-SortBy=@Model.CurrentSorting asp-route-pageIndex="@i">@(i) <span class="sr-only">(current)</span></a>
+                    </li>
+                }
+                else
+                {
+                    <li><a asp-page="./Index" asp-route-SortBy=@Model.CurrentSorting asp-route-pageIndex="@i">@(i)</a></li>
+                }
+
+            }
+
+
+
+            @if (Model.Weapons.CurrentPage == Model.Weapons.PageCount)
+            {
+                <li class="disabled">
+                    <span aria-hidden="true">&raquo;</span>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a asp-page="./Index" asp-route-SortBy=@Model.CurrentSorting asp-route-pageIndex="@(Model.Weapons.CurrentPage + 1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
