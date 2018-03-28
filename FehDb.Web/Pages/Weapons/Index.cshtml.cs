@@ -19,6 +19,8 @@ namespace FehDb.Web.Pages.Weapons
 
         public IActionResult OnGet(int pageIndex = 1, string sortBy = "Name,Asc")
         {
+            if (pageIndex < 1) pageIndex = 1;
+
             CurrentPage = pageIndex;
             CurrentSorting = sortBy;
 
