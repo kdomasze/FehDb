@@ -13,12 +13,12 @@ namespace FehDb.Web.Helpers
 {
     public static class HtmlHelpers
     {
-        public static IHtmlContent SortLink(this IHtmlHelper<IndexModel> helper, string text, string sortParam, int page)
+        public static IHtmlContent SortLink(this IHtmlHelper<IndexModel> helper, string text, string sortParam, int pageParam, string searchParam)
         {
             StringBuilder output = new StringBuilder();
             var sortText = string.IsNullOrEmpty(sortParam) ? text + ",Dec" : sortParam;
 
-            var content = helper.ActionLink(text, "", new { sortBy = sortText, pageIndex = page });
+            var content = helper.ActionLink(text, "", new { sortBy = sortText, pageIndex = pageParam, search = searchParam });
 
             output.Append(GetString(content));
             if (sortParam == text + ",Asc") output.Append("&#9662;");

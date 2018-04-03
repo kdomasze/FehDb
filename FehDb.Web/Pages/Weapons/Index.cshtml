@@ -6,19 +6,26 @@
 
 @using FehDb.Web.Helpers
 
-<h2>Index</h2>
+<h2>Weapons</h2>
+
+<form class="form-horizontal">
+    <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+        <input type="text" class="form-control" id="searchInput" name="search" placeholder="Search...">
+    </div>
+</form>
 
 <table class="table table-hover">
     <thead>
         <tr>
             <th>
-                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Name), (string)ViewData["NameSortParam"], Model.CurrentPage)
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Name), (string)ViewData["NameSortParam"], Model.CurrentPage, Model.CurrentSearch)
             </th>
             <th>
-                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Might), (string)ViewData["MightSortParam"], Model.CurrentPage)
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Might), (string)ViewData["MightSortParam"], Model.CurrentPage, Model.CurrentSearch)
             </th>
             <th>
-                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Range), (string)ViewData["RangeSortParam"], Model.CurrentPage)
+                @Html.SortLink(Html.DisplayNameFor(model => model.Weapons.Results[0].Range), (string)ViewData["RangeSortParam"], Model.CurrentPage, Model.CurrentSearch)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Weapons.Results[0].Effect)
@@ -75,7 +82,8 @@
         else
         {
         <li class="previous"><a asp-page="./Index" 
-                                asp-route-SortBy=@Model.CurrentSorting 
+                                asp-route-SortBy=@Model.CurrentSorting  
+                                asp-route-Search=@Model.CurrentSearch
                                 asp-route-pageIndex="@(Model.Weapons.CurrentPage - 1)" aria-label="Previous">
             <span aria-hidden="true">&larr;</span> Previous
              </a>
@@ -95,6 +103,7 @@
         {
         <li class="next"><a asp-page="./Index" 
                             asp-route-SortBy=@Model.CurrentSorting 
+                            asp-route-Search=@Model.CurrentSearch
                             asp-route-pageIndex="@(Model.Weapons.CurrentPage + 1)" aria-label="Next">
             Next <span aria-hidden="true">&rarr;</span>
              </a>

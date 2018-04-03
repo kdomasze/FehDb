@@ -23,7 +23,7 @@ namespace FehDb.API.Business
         private static IQueryable<Weapon> Search(IQueryable<Weapon> weapon, Query query)
         {
             if (query.Search == null) return weapon;
-            weapon = weapon.Where(w => w.Name == query.Search || w.Effect == query.Search);
+            weapon = weapon.Where(w => w.Name.Contains(query.Search) || w.Effect.Contains(query.Search));
 
             return weapon;
         }

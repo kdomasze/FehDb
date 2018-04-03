@@ -16,13 +16,15 @@ namespace FehDb.Web.Pages.Weapons
         public PagedResult<Weapon> Weapons { get; set; }
         public int CurrentPage { get; set; }
         public string CurrentSorting { get; set; }
+        public string CurrentSearch { get; set; }
 
-        public IActionResult OnGet(int pageIndex = 1, string sortBy = "Name,Asc")
+        public IActionResult OnGet(int pageIndex = 1, string sortBy = "Name,Asc", string search = "")
         {
             if (pageIndex < 1) pageIndex = 1;
 
             CurrentPage = pageIndex;
             CurrentSorting = sortBy;
+            CurrentSearch = search;
 
             HandleSorting(sortBy);
 
@@ -32,6 +34,7 @@ namespace FehDb.Web.Pages.Weapons
             
             request.AddQueryParameter("page", pageIndex.ToString());
             request.AddQueryParameter("sortBy", sortBy);
+            request.AddQueryParameter("search", search);
 
 
             var response = client.Execute(request);
