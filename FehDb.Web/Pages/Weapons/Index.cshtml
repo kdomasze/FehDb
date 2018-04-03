@@ -8,12 +8,7 @@
 
 <h2>Weapons <small><a data-toggle="modal" data-target="#filterModal">Filter</a></small></h2>
 
-<form class="form-horizontal">
-    <div class="input-group">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
-        <input type="text" class="form-control" id="searchInput" name="search" placeholder="Search...">
-    </div>
-</form>
+
 
 <table class="table table-hover weapons">
     <thead>
@@ -151,17 +146,24 @@
                                         <select class="form-control" name="weaponType">
                                             <option value="">-</option>
                                             @foreach (var weaponType in Model.WeaponTypes)
-                                {
-                                    @if (Model.Filter.WeaponType.ToString() == weaponType.ToString())
-                        {
-                            <option selected value=@weaponType>@weaponType</option>
-            }
-            else
             {
-                <option value=@weaponType>@weaponType</option>
+                                @if (Model.Filter?.WeaponType?.ToString() == weaponType.ToString())
+{
+                                <option selected value=@weaponType>@weaponType</option>
 }
-                    }
+else
+{
+                                <option value=@weaponType>@weaponType</option>
+}
+}
                                         </select>
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="form-group">
+                                        <label for="SearchInput">Search</label>
+                                        <input type="text" class="form-control" name="search" placeholder="Search...">
                                     </div>
 
                                     <hr />
