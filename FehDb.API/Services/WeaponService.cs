@@ -7,6 +7,7 @@ using FehDb.API.Infrustructure.Exceptions.Weapons;
 using FehDb.API.Models;
 using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
+using FehDb.API.Models.Resource;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Repositories;
 using System;
@@ -40,6 +41,13 @@ namespace FehDb.API.Services
             _WeaponEffectiveAgainstRepository = new BaseRepository<WeaponEffectiveAgainst>(context);
             _weaponStatChangeRepository = new BaseRepository<WeaponStatChange>(context);
 
+        }
+
+        public IList<WeaponTypeResource> GetWeaponTypes()
+        {
+            var weaponTypes = _weaponTypeRepository.GetAll(new Query(), new BaseFilter()).Results;
+
+            return _mapper.Map<IList<WeaponTypeResource>>(weaponTypes);
         }
 
         #region Weapons

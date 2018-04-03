@@ -33,3 +33,27 @@ body {
         display: none;
     }
 }
+
+/*
+ * Custom CSS
+*/
+/* Weapons */
+ul.filter {
+    padding-top: 12px;
+}
+
+ul.filter li {
+    display: inline-block;
+}
+
+th.links {
+    width: 9%;
+}
+
+th.type {
+    width: 12%;
+}
+
+th.name {
+    width: 15%;
+}

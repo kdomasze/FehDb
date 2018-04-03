@@ -21,6 +21,7 @@ namespace FehDb.Web.Models.WeaponModel
         public bool Refined { get; set; }
 
         //Navigation Properties
+        [Display(Name="Type")]
         [Required]
         public WeaponType WeaponType { get; set; }
         [Required]

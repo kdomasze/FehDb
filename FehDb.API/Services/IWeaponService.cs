@@ -1,6 +1,7 @@
 ﻿using FehDb.API.Models;
 using FehDb.API.Models.Binding;
 using FehDb.API.Models.Entity.WeaponModel;
+using FehDb.API.Models.Resource;
 using FehDb.API.Models.Resource.WeaponModel;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace FehDb.API.Services
 {
     public interface IWeaponService
     {
+        IList<WeaponTypeResource> GetWeaponTypes();
+
         PagedResult<WeaponResource> GetWeapons(Query query, WeaponFilter filter);
         WeaponResource GetWeaponByID(int ID);
         Task<WeaponResource> Create(WeaponResource entity);

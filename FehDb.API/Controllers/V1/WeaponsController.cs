@@ -6,6 +6,7 @@ using AutoMapper;
 using FehDb.API.Infrustructure.Exceptions;
 using FehDb.API.Models;
 using FehDb.API.Models.Binding;
+using FehDb.API.Models.Resource;
 using FehDb.API.Models.Resource.WeaponModel;
 using FehDb.API.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -22,6 +23,19 @@ namespace FehDb.API.V1.Controllers
         public WeaponsController(IWeaponService service)
         {
             _service = service;
+        }
+
+        /// <summary>
+        /// Gets all Weapon Types
+        /// </summary>
+        /// <returns>A list of Weapon Types</returns>
+        /// <response code="200">Returns the list of Weapon Types</response>
+        [HttpGet("Types", Name = "GetAllWeaponTypes")]
+        [ProducesResponseType(typeof(WeaponTypeResource), 200)]
+        public IActionResult GetAllWeaponTypes()
+        {
+            var result = _service.GetWeaponTypes();
+            return Ok(result);
         }
 
         #region Weapons
