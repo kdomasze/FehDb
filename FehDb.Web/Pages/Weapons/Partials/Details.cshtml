@@ -1,0 +1,140 @@
+﻿@page
+@model FehDb.Web.Pages.Weapons.Partials.DetailsModel
+@{
+    Layout = "./_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>@Model.Weapon.Name</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <img src="https://d1u5p3l4wpay3k.cloudfront.net/feheroes_gamepedia_en/a/a0/Weapon_Iron_Sword.png?version=7acfd87614b83a2130628df2c098e1d4" class="img-responsive center-block" />
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @Model.Weapon.Effect
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Weapon Type</th>
+                    <th>Might</th>
+                    <th>Range</th>
+                    <th>Exclusive</th>
+                    <th>Refined</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Weapon.WeaponType.ToString()</td>
+                    <td>@Model.Weapon.Might</td>
+                    <td>@Model.Weapon.Range</td>
+                    <td>
+                        @if (Model.Weapon.Refined)
+                        {<text>Yes</text>}
+                        else
+                        {<text>No</text>}
+                    </td>
+                    <td>
+                        @if (Model.Weapon.Exclusive)
+                        {<text>Yes</text>}
+                        else
+                        {<text>No</text>}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Cost</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>SP</th>
+                    <th>Arena Medals</th>
+                    <th>Refining Stones</th>
+                    <th>Refining Stones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Weapon.WeaponCost.SpCost</td>
+                    <td>@(Model.Weapon.WeaponCost.Medals == null ? "-" : Model.Weapon.WeaponCost.Medals.ToString())</td>
+                    <td>@(Model.Weapon.WeaponCost.Stones == null ? "-" : Model.Weapon.WeaponCost.Stones.ToString())</td>
+                    <td>@(Model.Weapon.WeaponCost.Dew == null ? "-" : Model.Weapon.WeaponCost.Dew.ToString())</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @if (Model.Weapon.Refined)
+        {
+        <h3>Stat Changes</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>HP</th>
+                    <th>Might</th>
+                    <th>Speed</th>
+                    <th>Defense</th>
+                    <th>Resistance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@(Model.Weapon.WeaponStatChange.HP == null ? "-" : Model.Weapon.WeaponStatChange.HP.ToString())</td>
+                    <td>@(Model.Weapon.WeaponStatChange.Might == null ? "-" : Model.Weapon.WeaponStatChange.Might.ToString())</td>
+                    <td>@(Model.Weapon.WeaponStatChange.Speed == null ? "-" : Model.Weapon.WeaponStatChange.Speed.ToString())</td>
+                    <td>@(Model.Weapon.WeaponStatChange.Defense == null ? "-" : Model.Weapon.WeaponStatChange.Defense.ToString())</td>
+                    <td>@(Model.Weapon.WeaponStatChange.Resistance == null ? "-" : Model.Weapon.WeaponStatChange.Resistance.ToString())</td>
+                </tr>
+            </tbody>
+        </table>
+        }
+
+        @if(Model.Weapon.WeaponEffectiveAgainst != null)
+        {
+        <h3>Effective Against</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    @if (Model.Weapon.WeaponEffectiveAgainst.WeaponTypes != null)
+                    {
+                    <th>Weapons</th>
+                    }
+                    @if (Model.Weapon.WeaponEffectiveAgainst.MovementTypes != null)
+                    {
+                    <th>Movement Types</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.EffectiveLoopLength; i++)
+                 {
+                <tr>
+                    
+                    @if (Model.Weapon.WeaponEffectiveAgainst.WeaponTypes != null && i < Model.Weapon.WeaponEffectiveAgainst.WeaponTypes.Count())
+                    {
+                    <td>@Model.Weapon.WeaponEffectiveAgainst.WeaponTypes[i].WeaponType.ToString()</td>
+                    }
+                    else if(Model.Weapon.WeaponEffectiveAgainst.WeaponTypes != null)
+                    {
+                    <td></td>
+                    }
+
+                    @if (Model.Weapon.WeaponEffectiveAgainst.MovementTypes != null && i < Model.Weapon.WeaponEffectiveAgainst.MovementTypes.Count())
+                    {
+                    <td>@Model.Weapon.WeaponEffectiveAgainst.MovementTypes[i].MovementType.ToString()</td>
+                    }
+                    else if(Model.Weapon.WeaponEffectiveAgainst.MovementTypes != null)
+                    {
+                    <td></td>
+                    }
+                </tr>
+                }
+            </tbody>
+        </table>
+        }
+    </div>
+</div>

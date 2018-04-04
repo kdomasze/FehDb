@@ -10,5 +10,10 @@ namespace FehDb.Web.Models
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public Movement Movement { get; set; }
+
+        public override string ToString()
+        {
+            return Movement.ToString();
+        }
     }
 }

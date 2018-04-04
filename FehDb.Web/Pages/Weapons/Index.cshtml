@@ -31,15 +31,12 @@
             <th class="type">
                 @Html.DisplayNameFor(model => model.Weapons.Results[0].WeaponType)
             </th>
-            <th class="links">
-                Links
-            </th>
         </tr>
     </thead>
     <tbody>
         @for (int i = 0; i < Model.Weapons.Results.Count; i++)
         {
-            <tr>
+            <tr id="@Model.Weapons.Results[i].ID" class="weapon-row">
                 <td>
                     @Model.Weapons.Results[i].Name
                 </td>
@@ -55,14 +52,11 @@
                 <td>
                     @if (Model.Weapons.Results[i].Refined)
                     {<text>Yes</text>}
-                    else
-                    {<text>No</text>}
+                else
+                {<text>No</text>}
                 </td>
                 <td>
                     @Model.Weapons.Results[i].WeaponType.ToString()
-                </td>
-                <td>
-                    <a>Details</a> | <a>Edit</a>
                 </td>
             </tr>
         }
@@ -98,247 +92,259 @@
             <li class="next">
 
                 @Html.PageLink("Next", Model.Weapons.CurrentPage + 1)
-                </li>
-            }
-        </ul>
-    </nav>
-    <!-- Modal -->
-                <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Filter</h4>
+            </li>
+        }
+    </ul>
+</nav>
+<!-- Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Filter</h4>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="MightInput">Might</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.MightFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.MightTo" placeholder="To...">
+                                    </div>
+                                </div>
                             </div>
-                            <form>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="MightInput">Might</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.MightFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.MightTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="RangeInput">Range</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.RangeFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.RangeTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="RangeInput">Range</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.RangeFrom" placeholder="From...">
                                     </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.RangeTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <label for="exclusiveInput">Weapon Type</label>
-                                    <div class="form-group">
-                                        <select class="form-control" name="weaponType">
-                                            <option value="">-</option>
-                                            @foreach (var weaponType in Model.WeaponTypes)
-            {
+                    <label for="exclusiveInput">Weapon Type</label>
+                    <div class="form-group">
+                        <select class="form-control" name="weaponType">
+                            <option value="">-</option>
+                            @foreach (var weaponType in Model.WeaponTypes)
+                            {
                                 @if (Model.Filter?.WeaponType?.ToString() == weaponType.ToString())
-{
-                                <option selected value=@weaponType>@weaponType</option>
-}
-else
-{
-                                <option value=@weaponType>@weaponType</option>
-}
-}
-                                        </select>
+                                {
+                                    <option selected value=@weaponType>@weaponType</option>
+                                }
+                                else
+                                {
+                                    <option value=@weaponType>@weaponType</option>
+                                }
+                            }
+                        </select>
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group">
+                        <label for="SearchInput">Search</label>
+                        <input type="text" class="form-control" name="search" placeholder="Search...">
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="@Model.Filter.Refined">Refined</label>
+                            <div class="form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput1" value="true"> Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput2" value="false"> No
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput3" value=""> N/A
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="@Model.Filter.Exclusive">Exclusive</label>
+                            <div class="form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput1" value="true"> Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput2" value="false"> No
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput3" value=""> N/A
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SPCostInput">SP Cost</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.SpCostFrom" placeholder="From...">
                                     </div>
-
-                                    <hr />
-
-                                    <div class="form-group">
-                                        <label for="SearchInput">Search</label>
-                                        <input type="text" class="form-control" name="search" placeholder="Search...">
-                                    </div>
-
-                                    <hr />
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label asp-for="@Model.Filter.Refined">Refined</label>
-                                            <div class="form-group">
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput1" value="true"> Yes
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput2" value="false"> No
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Refined" id="refinedInput3" value=""> N/A
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label asp-for="@Model.Filter.Exclusive">Exclusive</label>
-                                            <div class="form-group">
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput1" value="true"> Yes
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput2" value="false"> No
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" asp-for="@Model.Filter.Exclusive" id="exclusiveInput3" value=""> N/A
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <hr />
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SPCostInput">SP Cost</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.SpCostFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.SpCostTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="MedalCostInput">Arena Medal Cost</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.MedalsFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.MedalsTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="StonesCostInput">Refining Stone Cost</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.StonesFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.StonesTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="DewCostInput">Divine Dew Cost</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.DewFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.DewTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <hr />
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SCHPInput">HP</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.HPFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.HPTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SCMightInput">Might</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.MightFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.MightTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SCSpeedInput">Speed</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.SpeedFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.SpeedTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SCDefenseInput">Defense</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.DefenseFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.DefenseTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="SCResistanceInput">Resistance</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.ResistanceFrom" placeholder="From...">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.ResistanceTo" placeholder="To...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.SpCostTo" placeholder="To...">
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Filter</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="MedalCostInput">Arena Medal Cost</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.MedalsFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.MedalsTo" placeholder="To...">
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="StonesCostInput">Refining Stone Cost</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.StonesFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.StonesTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="DewCostInput">Divine Dew Cost</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.DewFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponCost.DewTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SCHPInput">HP</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.HPFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.HPTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SCMightInput">Might</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.MightFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.MightTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SCSpeedInput">Speed</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.SpeedFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.SpeedTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SCDefenseInput">Defense</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.DefenseFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.DefenseTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="SCResistanceInput">Resistance</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.ResistanceFrom" placeholder="From...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" asp-for="@Model.Filter.WeaponStatChange.ResistanceTo" placeholder="To...">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="details" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="details-content"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
