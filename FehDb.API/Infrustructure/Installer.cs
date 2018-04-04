@@ -45,7 +45,7 @@ namespace FehDb.API.Infrustructure
                 {
                     Title = "FehDb API",
                     Version = "v1",
-                    Description = "Database modeling all the characters and related data from Fire Emblem: Heroes."
+                    Description = "Database modeling all the characters and related data from Fire Emblem: Heroes.\nImages are available at the \"http://res.cloudinary.com/fehdb/image/upload/\" url."
                 });
 
                 var basePath = AppContext.BaseDirectory;

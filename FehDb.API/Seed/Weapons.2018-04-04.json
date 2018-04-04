@@ -1,0 +1,6284 @@
+﻿[
+  {
+    "Effect":
+      "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
+    "Exclusive": true,
+    "ImageUri": "v1522881269/Weapons/Falchion_Awakening.png",
+    "Might": 16,
+    "Name": "Falchion (Awakening)",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
+    "Exclusive": true,
+    "ImageUri": "v1522881269/Weapons/Falchion_Gaiden.png",
+    "Might": 16,
+    "Name": "Falchion (Gaiden)",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
+    "Exclusive": true,
+    "ImageUri": "v1522881269/Weapons/Falchion_Mystery.png",
+    "Might": 16,
+    "Name": "Falchion (Mystery)",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against flying units. Unit can pass though foes if own HP ≥ 50%.",
+    "Exclusive": true,
+    "ImageUri": "v1522881557/Weapons/Fujin_Yumi.png",
+    "Might": 14,
+    "Name": "Fujin Yumi",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Recovers HP=50% of damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522878160/weapons/Absorb.png",
+    "Might": 4,
+    "Name": "Absorb",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Restores HP = 50% of damage dealt. After combat, if unit attacked, restores 7 HP to allies within 2 spaces of unit.",
+    "Exclusive": false,
+    "ImageUri": "v1522878162/weapons/Absorb+.png",
+    "Might": 7,
+    "Name": "Absorb+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522878163/weapons/Alondite.png",
+    "Might": 16,
+    "Name": "Alondite",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Spd-2. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878163/weapons/Amiti.png",
+    "Might": 11,
+    "Name": "Amiti",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%.",
+    "Exclusive": false,
+    "ImageUri": "v1522878164/weapons/Armads.png",
+    "Might": 16,
+    "Name": "Armads",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878165/weapons/Armorslayer.png",
+    "Might": 8,
+    "Name": "Armorslayer",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878166/weapons/Armorslayer+.png",
+    "Might": 12,
+    "Name": "Armorslayer+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878167/weapons/Armorsmasher.png",
+    "Might": 10,
+    "Name": "Armorsmasher",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against armored foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522878168/weapons/Armorsmasher+.png",
+    "Might": 14,
+    "Name": "Armorsmasher+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
+    "Exclusive": false,
+    "ImageUri": "v1522878168/weapons/Assassin's Bow.png",
+    "Might": 7,
+    "Name": "Assassin's Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. If target has a dagger, it can't make a follow-up attack and this unit will.",
+    "Exclusive": false,
+    "ImageUri": "v1522878169/weapons/Assassin's Bow+.png",
+    "Might": 11,
+    "Name": "Assassin's Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878170/weapons/Assault.png",
+    "Might": 10,
+    "Name": "Assault",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1). Grants Res+5.",
+    "Exclusive": false,
+    "ImageUri": "v1522878171/weapons/Audhulma.png",
+    "Might": 16,
+    "Name": "Audhulma",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Restores 5 HP to adjacent allies after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878172/weapons/Aura.png",
+    "Might": 14,
+    "Name": "Aura",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied. )",
+    "Exclusive": false,
+    "ImageUri": "v1522878173/weapons/Ayra's Blade.png",
+    "Might": 16,
+    "Name": "Ayra's Blade",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1)",
+    "Exclusive": false,
+    "ImageUri": "v1522878174/weapons/Basilikos.png",
+    "Might": 16,
+    "Name": "Basilikos",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def+3. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878175/weapons/Beloved Zofia.png",
+    "Might": 16,
+    "Name": "Beloved Zofia",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Res+4 when the unit is under attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878176/weapons/Berkut's Lance.png",
+    "Might": 10,
+    "Name": "Berkut's Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants Res+4 when the unit is under attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878176/weapons/Berkut's Lance+.png",
+    "Might": 14,
+    "Name": "Berkut's Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Accelerates Special trigger (cooldown count-1). If unit's HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522878177/weapons/Berserk Armads.png",
+    "Might": 16,
+    "Name": "Berserk Armads",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Def/Res+2 when this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522878178/weapons/Binding Blade.png",
+    "Might": 16,
+    "Name": "Binding Blade",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522878179/weapons/Blárblade.png",
+    "Might": 9,
+    "Name": "Blárblade",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522878180/weapons/Blárblade+.png",
+    "Might": 13,
+    "Name": "Blárblade+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522878181/weapons/Blárowl.png",
+    "Might": 6,
+    "Name": "Blárowl",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522878182/weapons/Blárowl+.png",
+    "Might": 10,
+    "Name": "Blárowl+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522878183/weapons/Blárraven.png",
+    "Might": 7,
+    "Name": "Blárraven",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522878183/weapons/Blárraven+.png",
+    "Might": 11,
+    "Name": "Blárraven+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff.",
+    "Exclusive": false,
+    "ImageUri": "v1522878184/weapons/Blárserpent.png",
+    "Might": 8,
+    "Name": "Blárserpent",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff.",
+    "Exclusive": false,
+    "ImageUri": "v1522878186/weapons/Blárserpent+.png",
+    "Might": 12,
+    "Name": "Blárserpent+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878186/weapons/Blárwolf.png",
+    "Might": 6,
+    "Name": "Blárwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878187/weapons/Blárwolf+.png",
+    "Might": 10,
+    "Name": "Blárwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Atk+3. If unit's Atk > foe's, unit gains Special cooldown charge +1. (If using other similar skill, only highest value applied. )",
+    "Exclusive": false,
+    "ImageUri": "v1522878188/weapons/Blazing Durandal.png",
+    "Might": 16,
+    "Name": "Blazing Durandal",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878188/weapons/Blessed Bouquet.png",
+    "Might": 8,
+    "Name": "Blessed Bouquet",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878189/weapons/Blessed Bouquet+.png",
+    "Might": 12,
+    "Name": "Blessed Bouquet+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. Grants bonus to unit's Atk equal to total penalties on foe during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878190/weapons/Blizzard.png",
+    "Might": 14,
+    "Name": "Blizzard",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878191/weapons/Blue Egg.png",
+    "Might": 7,
+    "Name": "Blue Egg",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878192/weapons/Blue Egg+.png",
+    "Might": 11,
+    "Name": "Blue Egg+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878193/weapons/Blue Gift.png",
+    "Might": 8,
+    "Name": "Blue Gift",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878194/weapons/Blue Gift+.png",
+    "Might": 12,
+    "Name": "Blue Gift+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878195/weapons/Bolganone.png",
+    "Might": 9,
+    "Name": "Bolganone",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878196/weapons/Bolganone+.png",
+    "Might": 13,
+    "Name": "Bolganone+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878197/weapons/Brave Axe.png",
+    "Might": 5,
+    "Name": "Brave Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878198/weapons/Brave Axe+.png",
+    "Might": 8,
+    "Name": "Brave Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878199/weapons/Brave Bow.png",
+    "Might": 4,
+    "Name": "Brave Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Spd-5. Effective against flying units. Attacks twice if unit initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878199/weapons/Brave Bow+.png",
+    "Might": 7,
+    "Name": "Brave Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878200/weapons/Brave Lance.png",
+    "Might": 5,
+    "Name": "Brave Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878201/weapons/Brave Lance+.png",
+    "Might": 8,
+    "Name": "Brave Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878202/weapons/Brave Sword.png",
+    "Might": 5,
+    "Name": "Brave Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878203/weapons/Brave Sword+.png",
+    "Might": 8,
+    "Name": "Brave Sword+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Def+4 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878203/weapons/Bright Naginata.png",
+    "Might": 16,
+    "Name": "Bright Naginata",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.",
+    "Exclusive": false,
+    "ImageUri": "v1522878204/weapons/Brynhildr.png",
+    "Might": 14,
+    "Name": "Brynhildr",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878205/weapons/Candelabra.png",
+    "Might": 8,
+    "Name": "Candelabra",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878206/weapons/Candelabra+.png",
+    "Might": 12,
+    "Name": "Candelabra+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts status on foe preventing counterattacks through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522878206/weapons/Candlelight.png",
+    "Might": 7,
+    "Name": "Candlelight",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522878207/weapons/Candlelight+.png",
+    "Might": 11,
+    "Name": "Candlelight+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878207/weapons/Carrot Axe.png",
+    "Might": 9,
+    "Name": "Carrot Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878208/weapons/Carrot Axe+.png",
+    "Might": 13,
+    "Name": "Carrot Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878209/weapons/Carrot Lance.png",
+    "Might": 9,
+    "Name": "Carrot Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522878210/weapons/Carrot Lance+.png",
+    "Might": 13,
+    "Name": "Carrot Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878211/weapons/Casa Blanca.png",
+    "Might": 10,
+    "Name": "Casa Blanca",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878211/weapons/Casa Blanca+.png",
+    "Might": 14,
+    "Name": "Casa Blanca+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878212/weapons/Clarisse's Bow.png",
+    "Might": 7,
+    "Name": "Clarisse's Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878213/weapons/Clarisse's Bow+.png",
+    "Might": 11,
+    "Name": "Clarisse's Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+    "Exclusive": false,
+    "ImageUri": "v1522878214/weapons/Cupid Arrow.png",
+    "Might": 8,
+    "Name": "Cupid Arrow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers.",
+    "Exclusive": false,
+    "ImageUri": "v1522878215/weapons/Cupid Arrow+.png",
+    "Might": 12,
+    "Name": "Cupid Arrow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1). Unit takes 4 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878215/weapons/Cursed Lance.png",
+    "Might": 16,
+    "Name": "Cursed Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878216/weapons/Cymbeline.png",
+    "Might": 14,
+    "Name": "Cymbeline",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522878217/weapons/Dancer's Fan.png",
+    "Might": 7,
+    "Name": "Dancer's Fan",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522878481/weapons/Dancer's Fan+.png",
+    "Might": 10,
+    "Name": "Dancer's Fan+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878482/weapons/Dancer's Ring.png",
+    "Might": 8,
+    "Name": "Dancer's Ring",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878482/weapons/Dancer's Ring+.png",
+    "Might": 12,
+    "Name": "Dancer's Ring+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878483/weapons/Dancer's Score.png",
+    "Might": 8,
+    "Name": "Dancer's Score",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, adjacent allies recover 7 HP after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878484/weapons/Dancer's Score+.png",
+    "Might": 12,
+    "Name": "Dancer's Score+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies who use swords, axes, lances, or dragonstones Atk+6 through their next actions at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522878485/weapons/Dark Aura.png",
+    "Might": 14,
+    "Name": "Dark Aura",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522878486/weapons/Dark Breath.png",
+    "Might": 9,
+    "Name": "Dark Breath",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522878486/weapons/Dark Breath+.png",
+    "Might": 13,
+    "Name": "Dark Breath+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "Grants +10 to damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522878487/weapons/Dark Excalibur.png",
+    "Might": 14,
+    "Name": "Dark Excalibur",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd+4 during combat if unit initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878487/weapons/Dark Greatsword.png",
+    "Might": 16,
+    "Name": "Dark Greatsword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, deals 7 damage to foe after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878488/weapons/Deathly Dagger.png",
+    "Might": 11,
+    "Name": "Deathly Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878489/weapons/Deft Harpoon.png",
+    "Might": 10,
+    "Name": "Deft Harpoon",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878490/weapons/Deft Harpoon+.png",
+    "Might": 14,
+    "Name": "Deft Harpoon+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Spd-5. Attack twice when initiating combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878490/weapons/Dire Thunder.png",
+    "Might": 9,
+    "Name": "Dire Thunder",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Effective against dragons. Foe's bonuses (from skills like Fortify, Rally, etc. ) are nullified during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522878491/weapons/Divine Naga.png",
+    "Might": 14,
+    "Name": "Divine Naga",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878492/weapons/Divine Tyrfing.png",
+    "Might": 16,
+    "Name": "Divine Tyrfing",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk+4 during combat if unit initiates attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878493/weapons/Durandal.png",
+    "Might": 16,
+    "Name": "Durandal",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522878494/weapons/Eckesachs.png",
+    "Might": 16,
+    "Name": "Eckesachs",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878494/weapons/Elfire.png",
+    "Might": 6,
+    "Name": "Elfire",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522878495/weapons/Élivágar.png",
+    "Might": 14,
+    "Name": "Élivágar",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522879306/weapons/Ellight.png",
+    "Might": 6,
+    "Name": "Ellight",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878497/weapons/Elthunder.png",
+    "Might": 6,
+    "Name": "Elthunder",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878497/weapons/Elwind.png",
+    "Might": 6,
+    "Name": "Elwind",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522878498/weapons/Emerald Axe.png",
+    "Might": 8,
+    "Name": "Emerald Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522878499/weapons/Emerald Axe+.png",
+    "Might": 12,
+    "Name": "Emerald Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522878500/weapons/Excalibur.png",
+    "Might": 14,
+    "Name": "Excalibur",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+    "Exclusive": false,
+    "ImageUri": "v1522879317/weapons/Expiration.png",
+    "Might": 16,
+    "Name": "Expiration",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Atk-6 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522878762/weapons/Fear.png",
+    "Might": 5,
+    "Name": "Fear",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Atk-7 on target and foes within 2 spaces of target through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522878764/weapons/Fear+.png",
+    "Might": 12,
+    "Name": "Fear+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res.",
+    "Exclusive": false,
+    "ImageUri": "v1522878765/weapons/Felicia's Plate.png",
+    "Might": 14,
+    "Name": "Felicia's Plate",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878767/weapons/Fenrir.png",
+    "Might": 9,
+    "Name": "Fenrir",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878768/weapons/Fenrir+.png",
+    "Might": 13,
+    "Name": "Fenrir+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522878770/weapons/Fensalir.png",
+    "Might": 16,
+    "Name": "Fensalir",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878772/weapons/Fire.png",
+    "Might": 4,
+    "Name": "Fire",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878774/weapons/Fire Breath.png",
+    "Might": 6,
+    "Name": "Fire Breath",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878775/weapons/Fire Breath+.png",
+    "Might": 8,
+    "Name": "Fire Breath+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "Effective against fliers. Unit and enemies cannot use counterattacks.",
+    "Exclusive": false,
+    "ImageUri": "v1522878777/weapons/Firesweep Bow.png",
+    "Might": 7,
+    "Name": "Firesweep Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against fliers. Unit and enemies cannot use counterattacks.",
+    "Exclusive": false,
+    "ImageUri": "v1522878778/weapons/Firesweep Bow+.png",
+    "Might": 11,
+    "Name": "Firesweep Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Unit and enemies cannot use counterattacks.",
+    "Exclusive": false,
+    "ImageUri": "v1522878780/weapons/Firesweep Lance.png",
+    "Might": 11,
+    "Name": "Firesweep Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Unit and enemies cannot use counterattacks.",
+    "Exclusive": false,
+    "ImageUri": "v1522878781/weapons/Firesweep Lance+.png",
+    "Might": 15,
+    "Name": "Firesweep Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Unit and foes cannot counterattack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878784/weapons/Firesweep Sword.png",
+    "Might": 11,
+    "Name": "Firesweep Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Unit and foes cannot counterattack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878786/weapons/Firesweep Sword+.png",
+    "Might": 15,
+    "Name": "Firesweep Sword+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878787/weapons/First Bite.png",
+    "Might": 10,
+    "Name": "First Bite",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522878788/weapons/First Bite+.png",
+    "Might": 14,
+    "Name": "First Bite+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522878790/weapons/Flame Siegmund.png",
+    "Might": 16,
+    "Name": "Flame Siegmund",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878791/weapons/Flametongue.png",
+    "Might": 11,
+    "Name": "Flametongue",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878793/weapons/Flametongue+.png",
+    "Might": 15,
+    "Name": "Flametongue+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522878794/weapons/Flux.png",
+    "Might": 4,
+    "Name": "Flux",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
+    "Exclusive": false,
+    "ImageUri": "v1522878796/weapons/Fólkvangr.png",
+    "Might": 16,
+    "Name": "Fólkvangr",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880021/weapons/Geirskögul.png",
+    "Might": 16,
+    "Name": "Geirskögul",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants +10 damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880023/weapons/Giant Spoon.png",
+    "Might": 9,
+    "Name": "Giant Spoon",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants +10 damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880024/weapons/Giant Spoon+.png",
+    "Might": 13,
+    "Name": "Giant Spoon+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. If foes' HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880026/weapons/Gleipnir.png",
+    "Might": 14,
+    "Name": "Gleipnir",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880027/weapons/Gradivus.png",
+    "Might": 16,
+    "Name": "Gradivus",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880028/weapons/Gratia.png",
+    "Might": 8,
+    "Name": "Gratia",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880030/weapons/Gratia+.png",
+    "Might": 12,
+    "Name": "Gratia+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, prevents foe from moving more than 1 space through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880031/weapons/Gravity.png",
+    "Might": 6,
+    "Name": "Gravity",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, prevents target and foes within 1 space of target from moving more than 1 space through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880033/weapons/Gravity+.png",
+    "Might": 10,
+    "Name": "Gravity+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants Atk+3. If unit's Def - foe's Def ≥ 5, foe can't make a follow-up attack. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+    "Exclusive": false,
+    "ImageUri": "v1522880034/weapons/Great Flame.png",
+    "Might": 16,
+    "Name": "Great Flame",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522880036/weapons/Green Egg.png",
+    "Might": 7,
+    "Name": "Green Egg",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "If unit initiates attack, unit recovers 4 HP after the battle.",
+    "Exclusive": false,
+    "ImageUri": "v1522880037/weapons/Green Egg+.png",
+    "Might": 11,
+    "Name": "Green Egg+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880039/weapons/Green Gift.png",
+    "Might": 8,
+    "Name": "Green Gift",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc. ) during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880040/weapons/Green Gift+.png",
+    "Might": 12,
+    "Name": "Green Gift+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def+3. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd+5 to unit and allies within 2 spaces for 1 turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880042/weapons/Grima's Truth.png",
+    "Might": 14,
+    "Name": "Grima's Truth",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880043/weapons/Grimoire.png",
+    "Might": 14,
+    "Name": "Grimoire",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522880045/weapons/Gronnblade.png",
+    "Might": 9,
+    "Name": "Gronnblade",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522880046/weapons/Gronnblade+.png",
+    "Might": 13,
+    "Name": "Gronnblade+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522880048/weapons/Gronnowl.png",
+    "Might": 6,
+    "Name": "Gronnowl",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522880049/weapons/Gronnowl+.png",
+    "Might": 10,
+    "Name": "Gronnowl+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880051/weapons/Gronnraven.png",
+    "Might": 7,
+    "Name": "Gronnraven",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880052/weapons/Gronnraven+.png",
+    "Might": 11,
+    "Name": "Gronnraven+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880054/weapons/Gronnwolf.png",
+    "Might": 6,
+    "Name": "Gronnwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880056/weapons/Gronnwolf+.png",
+    "Might": 10,
+    "Name": "Gronnwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+    "Exclusive": false,
+    "ImageUri": "v1522880058/weapons/Guard Bow.png",
+    "Might": 8,
+    "Name": "Guard Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.",
+    "Exclusive": false,
+    "ImageUri": "v1522880060/weapons/Guard Bow+.png",
+    "Might": 12,
+    "Name": "Guard Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880061/weapons/Hagoita.png",
+    "Might": 10,
+    "Name": "Hagoita",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880062/weapons/Hagoita+.png",
+    "Might": 14,
+    "Name": "Hagoita+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes . Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880064/weapons/Hama Ya.png",
+    "Might": 8,
+    "Name": "Hama Ya",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes . Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880065/weapons/Hama Ya+.png",
+    "Might": 12,
+    "Name": "Hama Ya+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880067/weapons/Hammer.png",
+    "Might": 8,
+    "Name": "Hammer",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880068/weapons/Hammer+.png",
+    "Might": 12,
+    "Name": "Hammer+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880070/weapons/Handbell.png",
+    "Might": 10,
+    "Name": "Handbell",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880071/weapons/Handbell+.png",
+    "Might": 14,
+    "Name": "Handbell+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880072/weapons/Hauteclere.png",
+    "Might": 16,
+    "Name": "Hauteclere",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880074/weapons/Heavy Spear.png",
+    "Might": 8,
+    "Name": "Heavy Spear",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880076/weapons/Heavy Spear+.png",
+    "Might": 12,
+    "Name": "Heavy Spear+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880077/weapons/Hibiscus Tome.png",
+    "Might": 8,
+    "Name": "Hibiscus Tome",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880079/weapons/Hibiscus Tome+.png",
+    "Might": 12,
+    "Name": "Hibiscus Tome+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit.",
+    "Exclusive": false,
+    "ImageUri": "v1522880080/weapons/Hinoka's Spear.png",
+    "Might": 16,
+    "Name": "Hinoka's Spear",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through it's next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880081/weapons/Huginn's Egg.png",
+    "Might": 14,
+    "Name": "Huginn's Egg",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880083/weapons/Iron Axe.png",
+    "Might": 6,
+    "Name": "Iron Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880085/weapons/Iron Bow.png",
+    "Might": 4,
+    "Name": "Iron Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880086/weapons/Iron Dagger.png",
+    "Might": 3,
+    "Name": "Iron Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880087/weapons/Iron Lance.png",
+    "Might": 6,
+    "Name": "Iron Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880089/weapons/Iron Sword.png",
+    "Might": 6,
+    "Name": "Iron Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880091/weapons/Ivaldi.png",
+    "Might": 14,
+    "Name": "Ivaldi",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880092/weapons/Kadomatsu.png",
+    "Might": 10,
+    "Name": "Kadomatsu",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Def/Res+2 during combat to allies within 2 spaces.",
+    "Exclusive": false,
+    "ImageUri": "v1522880093/weapons/Kadomatsu+.png",
+    "Might": 14,
+    "Name": "Kadomatsu+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880095/weapons/Kagami Mochi.png",
+    "Might": 8,
+    "Name": "Kagami Mochi",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880096/weapons/Kagami Mochi+.png",
+    "Might": 12,
+    "Name": "Kagami Mochi+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880097/weapons/Keen Blárwolf.png",
+    "Might": 8,
+    "Name": "Keen Blárwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880099/weapons/Keen Blárwolf+.png",
+    "Might": 12,
+    "Name": "Keen Blárwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880101/weapons/Keen Gronnwolf.png",
+    "Might": 8,
+    "Name": "Keen Gronnwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880102/weapons/Keen Gronnwolf+.png",
+    "Might": 12,
+    "Name": "Keen Gronnwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880103/weapons/Keen Rauðrwolf.png",
+    "Might": 8,
+    "Name": "Keen Rauðrwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880105/weapons/Keen Rauðrwolf+.png",
+    "Might": 12,
+    "Name": "Keen Rauðrwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880106/weapons/Killer Axe.png",
+    "Might": 7,
+    "Name": "Killer Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880108/weapons/Killer Axe+.png",
+    "Might": 11,
+    "Name": "Killer Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880110/weapons/Killer Bow.png",
+    "Might": 5,
+    "Name": "Killer Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880111/weapons/Killer Bow+.png",
+    "Might": 9,
+    "Name": "Killer Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880112/weapons/Killer Lance.png",
+    "Might": 7,
+    "Name": "Killer Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880114/weapons/Killer Lance+.png",
+    "Might": 11,
+    "Name": "Killer Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880115/weapons/Killing Edge.png",
+    "Might": 7,
+    "Name": "Killing Edge",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880117/weapons/Killing Edge+.png",
+    "Might": 11,
+    "Name": "Killing Edge+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against magic foes. After combat, if unit attacked and if foe uses magic, inflicts Def/Res-5 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880119/weapons/Kitty Paddle.png",
+    "Might": 5,
+    "Name": "Kitty Paddle",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against magic foes. After combat, if unit attacked and if foe uses magic, inflicts Def/Res-7 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880121/weapons/Kitty Paddle+.png",
+    "Might": 8,
+    "Name": "Kitty Paddle+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Grants Atk+3. Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522880429/weapons/Laevatein.png",
+    "Might": 16,
+    "Name": "Laevatein",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "After combat, bonuses on targeted foe become penalties through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880431/weapons/Legion's Axe.png",
+    "Might": 10,
+    "Name": "Legion's Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "After combat, bonuses on targeted foe become penalties through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880432/weapons/Legion's Axe+.png",
+    "Might": 14,
+    "Name": "Legion's Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Unit can counterattack regardless of foe's range.",
+    "Exclusive": false,
+    "ImageUri": "v1522880433/weapons/Leiptr.png",
+    "Might": 16,
+    "Name": "Leiptr",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880435/weapons/Lethal Carrot.png",
+    "Might": 8,
+    "Name": "Lethal Carrot",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880436/weapons/Lethal Carrot+.png",
+    "Might": 12,
+    "Name": "Lethal Carrot+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880438/weapons/Light.png",
+    "Might": 4,
+    "Name": "Light",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522880439/weapons/Light Breath.png",
+    "Might": 9,
+    "Name": "Light Breath",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates.",
+    "Exclusive": false,
+    "ImageUri": "v1522880440/weapons/Light Breath+.png",
+    "Might": 13,
+    "Name": "Light Breath+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880442/weapons/Lightning Breath.png",
+    "Might": 7,
+    "Name": "Lightning Breath",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880443/weapons/Lightning Breath+.png",
+    "Might": 11,
+    "Name": "Lightning Breath+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Breath",
+      "Color": "Multicolor"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880445/weapons/Lilith Floatie.png",
+    "Might": 10,
+    "Name": "Lilith Floatie",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880446/weapons/Lilith Floatie+.png",
+    "Might": 14,
+    "Name": "Lilith Floatie+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880448/weapons/Melon Crusher.png",
+    "Might": 10,
+    "Name": "Melon Crusher",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880449/weapons/Melon Crusher+.png",
+    "Might": 14,
+    "Name": "Melon Crusher+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880450/weapons/Monstrous Bow.png",
+    "Might": 8,
+    "Name": "Monstrous Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880452/weapons/Monstrous Bow+.png",
+    "Might": 12,
+    "Name": "Monstrous Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc. ) are nullified during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880453/weapons/Mulagir.png",
+    "Might": 14,
+    "Name": "Mulagir",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. At start of turn, if unit's HP ≥ 50%, inflicts Atk/Res-5 on foe on the enemy team with the lowest Spd through it's next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880455/weapons/Muninn's Egg.png",
+    "Might": 14,
+    "Name": "Muninn's Egg",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880456/weapons/Mystletainn.png",
+    "Might": 16,
+    "Name": "Mystletainn",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against dragons. Grants Def/Res+2 when this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880458/weapons/Naga.png",
+    "Might": 14,
+    "Name": "Naga",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880459/weapons/Naglfar.png",
+    "Might": 14,
+    "Name": "Naglfar",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522880761/weapons/Nidhogg.png",
+    "Might": 14,
+    "Name": "Nidhogg",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Grants Spd+3. Adds 50% of total bonuses on foe to unit's Atk/Spd/Def/Res during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880763/weapons/Níu.png",
+    "Might": 16,
+    "Name": "Níu",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Unit may move adjacent to any ally when HP ≤ 40%.",
+    "Exclusive": false,
+    "ImageUri": "v1522880764/weapons/Nóatún.png",
+    "Might": 16,
+    "Name": "Nóatún",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "After combat, if unit attacked, deals 10 damage to foe.",
+    "Exclusive": false,
+    "ImageUri": "v1522880766/weapons/Pain.png",
+    "Might": 3,
+    "Name": "Pain",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, deals 10 damage to target and foes within 2 spaces of target.",
+    "Exclusive": false,
+    "ImageUri": "v1522880767/weapons/Pain+.png",
+    "Might": 10,
+    "Name": "Pain+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, bonuses on foe become penalties through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880768/weapons/Panic.png",
+    "Might": 7,
+    "Name": "Panic",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, bonuses on target and foes within 2 spaces of target become penalties through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880770/weapons/Panic+.png",
+    "Might": 11,
+    "Name": "Panic+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Grants Res+4 during combat if initiating attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522880771/weapons/Parthia.png",
+    "Might": 14,
+    "Name": "Parthia",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880773/weapons/Peshkatz.png",
+    "Might": 14,
+    "Name": "Peshkatz",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against infantry foes. After combat, if unit attacked, inflicts Def/Res-4 on infantry foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880774/weapons/Poison Dagger.png",
+    "Might": 2,
+    "Name": "Poison Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against infantry foes. After combat, if unit attacked, inflicts Def/Res-6 on infantry foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880776/weapons/Poison Dagger+.png",
+    "Might": 5,
+    "Name": "Poison Dagger+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880777/weapons/Poleaxe.png",
+    "Might": 10,
+    "Name": "Poleaxe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880778/weapons/Poleaxe+.png",
+    "Might": 14,
+    "Name": "Poleaxe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880780/weapons/Ragnarok.png",
+    "Might": 14,
+    "Name": "Ragnarok",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880781/weapons/Ragnell.png",
+    "Might": 16,
+    "Name": "Ragnell",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880783/weapons/Raijinto.png",
+    "Might": 16,
+    "Name": "Raijinto",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522880784/weapons/Rauðrblade.png",
+    "Might": 9,
+    "Name": "Rauðrblade",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt.",
+    "Exclusive": false,
+    "ImageUri": "v1522880785/weapons/Rauðrblade+.png",
+    "Might": 13,
+    "Name": "Rauðrblade+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522880787/weapons/Rauðrowl.png",
+    "Might": 6,
+    "Name": "Rauðrowl",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies × 2.",
+    "Exclusive": false,
+    "ImageUri": "v1522880788/weapons/Rauðrowl+.png",
+    "Might": 10,
+    "Name": "Rauðrowl+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880789/weapons/Rauðrraven.png",
+    "Might": 7,
+    "Name": "Rauðrraven",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants weapon advantage vs. colorless foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880791/weapons/Rauðrraven+.png",
+    "Might": 11,
+    "Name": "Rauðrraven+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880792/weapons/Rauðrwolf.png",
+    "Might": 6,
+    "Name": "Rauðrwolf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880793/weapons/Rauðrwolf+.png",
+    "Might": 10,
+    "Name": "Rauðrwolf+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880795/weapons/Refreshing Bolt.png",
+    "Might": 8,
+    "Name": "Refreshing Bolt",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880798/weapons/Refreshing Bolt+.png",
+    "Might": 12,
+    "Name": "Refreshing Bolt+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880799/weapons/Regal Blade.png",
+    "Might": 16,
+    "Name": "Regal Blade",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk+3. Grants +10 to damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880800/weapons/Resolute Blade.png",
+    "Might": 16,
+    "Name": "Resolute Blade",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880802/weapons/Rexcalibur.png",
+    "Might": 9,
+    "Name": "Rexcalibur",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880803/weapons/Rexcalibur+.png",
+    "Might": 13,
+    "Name": "Rexcalibur+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880804/weapons/Ridersbane.png",
+    "Might": 10,
+    "Name": "Ridersbane",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880805/weapons/Ridersbane+.png",
+    "Might": 14,
+    "Name": "Ridersbane+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880807/weapons/Rogue Dagger.png",
+    "Might": 4,
+    "Name": "Rogue Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880808/weapons/Rogue Dagger+.png",
+    "Might": 7,
+    "Name": "Rogue Dagger+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522880810/weapons/Ruby Sword.png",
+    "Might": 8,
+    "Name": "Ruby Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522880811/weapons/Ruby Sword+.png",
+    "Might": 12,
+    "Name": "Ruby Sword+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880813/weapons/Ruin.png",
+    "Might": 6,
+    "Name": "Ruin",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880814/weapons/Sack o' Gifts.png",
+    "Might": 10,
+    "Name": "Sack o' Gifts",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880815/weapons/Sack o' Gifts+.png",
+    "Might": 14,
+    "Name": "Sack o' Gifts+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522880816/weapons/Sapphire Lance.png",
+    "Might": 8,
+    "Name": "Sapphire Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage.",
+    "Exclusive": false,
+    "ImageUri": "v1522880818/weapons/Sapphire Lance+.png",
+    "Might": 12,
+    "Name": "Sapphire Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Effective against dragon foes. If unit's HP < 100% at start of combat, grants Atk/Spd/Def/Res+5 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880819/weapons/Sealed Falchion.png",
+    "Might": 16,
+    "Name": "Sealed Falchion",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880822/weapons/Sealife Tome.png",
+    "Might": 8,
+    "Name": "Sealife Tome",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880824/weapons/Sealife Tome+.png",
+    "Might": 12,
+    "Name": "Sealife Tome+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2, but unit takes 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880826/weapons/Seashell.png",
+    "Might": 7,
+    "Name": "Seashell",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2, but unit takes 2 damage after combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880827/weapons/Seashell+.png",
+    "Might": 10,
+    "Name": "Seashell+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880829/weapons/Shine.png",
+    "Might": 9,
+    "Name": "Shine",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880830/weapons/Shine+.png",
+    "Might": 13,
+    "Name": "Shine+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880832/weapons/Siegfried.png",
+    "Might": 16,
+    "Name": "Siegfried",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880833/weapons/Sieglinde.png",
+    "Might": 16,
+    "Name": "Sieglinde",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants adjacent allies Atk+3 through their next actions at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880835/weapons/Siegmund.png",
+    "Might": 16,
+    "Name": "Siegmund",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880836/weapons/Silver Axe.png",
+    "Might": 11,
+    "Name": "Silver Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880838/weapons/Silver Axe+.png",
+    "Might": 15,
+    "Name": "Silver Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880839/weapons/Silver Bow.png",
+    "Might": 9,
+    "Name": "Silver Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880841/weapons/Silver Bow+.png",
+    "Might": 13,
+    "Name": "Silver Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880843/weapons/Silver Dagger.png",
+    "Might": 7,
+    "Name": "Silver Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880844/weapons/Silver Dagger+.png",
+    "Might": 10,
+    "Name": "Silver Dagger+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880845/weapons/Silver Lance.png",
+    "Might": 11,
+    "Name": "Silver Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880847/weapons/Silver Lance+.png",
+    "Might": 15,
+    "Name": "Silver Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880848/weapons/Silver Sword.png",
+    "Might": 11,
+    "Name": "Silver Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880849/weapons/Silver Sword+.png",
+    "Might": 15,
+    "Name": "Silver Sword+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Grants Def+3. Deals 20 damage to foes within 2 spaces at the start of each turn.",
+    "Exclusive": false,
+    "ImageUri": "v1522880851/weapons/Sinmara.png",
+    "Might": 16,
+    "Name": "Sinmara",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying foes. Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880852/weapons/Skadi.png",
+    "Might": 14,
+    "Name": "Skadi",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880854/weapons/Slaying Axe.png",
+    "Might": 10,
+    "Name": "Slaying Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880855/weapons/Slaying Axe+.png",
+    "Might": 14,
+    "Name": "Slaying Axe+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880857/weapons/Slaying Bow.png",
+    "Might": 8,
+    "Name": "Slaying Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "Effective against flying units. Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880858/weapons/Slaying Bow+.png",
+    "Might": 12,
+    "Name": "Slaying Bow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880859/weapons/Slaying Edge.png",
+    "Might": 10,
+    "Name": "Slaying Edge",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880861/weapons/Slaying Edge+.png",
+    "Might": 14,
+    "Name": "Slaying Edge+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880863/weapons/Slaying Hammer.png",
+    "Might": 10,
+    "Name": "Slaying Hammer",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against armored foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880864/weapons/Slaying Hammer+.png",
+    "Might": 14,
+    "Name": "Slaying Hammer+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880866/weapons/Slaying Lance.png",
+    "Might": 10,
+    "Name": "Slaying Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Accelerates Special trigger (cooldown count-1).",
+    "Exclusive": false,
+    "ImageUri": "v1522880867/weapons/Slaying Lance+.png",
+    "Might": 14,
+    "Name": "Slaying Lance+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against armored units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880869/weapons/Slaying Spear.png",
+    "Might": 10,
+    "Name": "Slaying Spear",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Effective against armored foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880870/weapons/Slaying Spear+.png",
+    "Might": 14,
+    "Name": "Slaying Spear+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Spd-6 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880871/weapons/Slow.png",
+    "Might": 5,
+    "Name": "Slow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 150,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880873/weapons/Slow+.png",
+    "Might": 12,
+    "Name": "Slow+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880874/weapons/Smoke Dagger.png",
+    "Might": 6,
+    "Name": "Smoke Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880876/weapons/Smoke Dagger+.png",
+    "Might": 9,
+    "Name": "Smoke Dagger+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.",
+    "Exclusive": false,
+    "ImageUri": "v1522880877/weapons/Sol Katti.png",
+    "Might": 16,
+    "Name": "Sol Katti",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880879/weapons/Spectral Tome.png",
+    "Might": 8,
+    "Name": "Spectral Tome",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, bonuses on all foes within 2 spaces of target become penalties through foes' next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880880/weapons/Spectral Tome+.png",
+    "Might": 12,
+    "Name": "Spectral Tome+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880881/weapons/Steel Axe.png",
+    "Might": 8,
+    "Name": "Steel Axe",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against flying units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880883/weapons/Steel Bow.png",
+    "Might": 6,
+    "Name": "Steel Bow",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Bow",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect":
+      "After combat, if unit attacked, inflicts Def/Res-3 on foe through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880884/weapons/Steel Dagger.png",
+    "Might": 5,
+    "Name": "Steel Dagger",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Dagger",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880886/weapons/Steel Lance.png",
+    "Might": 8,
+    "Name": "Steel Lance",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880887/weapons/Steel Sword.png",
+    "Might": 8,
+    "Name": "Steel Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 100,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Enables counterattack regardless of distance if this unit is attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880889/weapons/Stout Tomahawk.png",
+    "Might": 16,
+    "Name": "Stout Tomahawk",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880890/weapons/Tannenboom!.png",
+    "Might": 10,
+    "Name": "Tannenboom!",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880892/weapons/Tannenboom!+.png",
+    "Might": 14,
+    "Name": "Tannenboom!+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%.",
+    "Exclusive": false,
+    "ImageUri": "v1522880893/weapons/Thani.png",
+    "Might": 14,
+    "Name": "Thani",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Damage from staff calculated like other weapons. At start of turn, foes with bow, daggers, magic, or staff in cardinal directions with HP 3 or more lower than unit's can move only 1 space through their next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880895/weapons/Thökk.png",
+    "Might": 14,
+    "Name": "Thökk",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Staff",
+      "Color": "Colorless"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880897/weapons/Thoron.png",
+    "Might": 9,
+    "Name": "Thoron",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880898/weapons/Thoron+.png",
+    "Might": 13,
+    "Name": "Thoron+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880900/weapons/Thunder.png",
+    "Might": 4,
+    "Name": "Thunder",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880901/weapons/Tomato Tome.png",
+    "Might": 8,
+    "Name": "Tomato Tome",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880902/weapons/Tomato Tome+.png",
+    "Might": 12,
+    "Name": "Tomato Tome+",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Def+4 in battle if unit's HP ≤ 50%.",
+    "Exclusive": false,
+    "ImageUri": "v1522880904/weapons/Tyrfing.png",
+    "Might": 16,
+    "Name": "Tyrfing",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, damage from second attack onward reduced by 80%.",
+    "Exclusive": false,
+    "ImageUri": "v1522880905/weapons/Urvan.png",
+    "Might": 16,
+    "Name": "Urvan",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.",
+    "Exclusive": false,
+    "ImageUri": "v1522880907/weapons/Urðr.png",
+    "Might": 16,
+    "Name": "Urðr",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Axe",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.",
+    "Exclusive": false,
+    "ImageUri": "v1522880908/weapons/Valaskjálf.png",
+    "Might": 14,
+    "Name": "Valaskjálf",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880910/weapons/Valflame.png",
+    "Might": 14,
+    "Name": "Valflame",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect":
+      "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
+    "Exclusive": false,
+    "ImageUri": "v1522880911/weapons/Vidofnir.png",
+    "Might": 16,
+    "Name": "Vidofnir",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Lance",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect":
+      "Grants Spd+3. At start of turn, all foes in cardinal directions, and with Res 1 or more lower than unit, suffer Spd-5 until the end of foes' next actions.",
+    "Exclusive": false,
+    "ImageUri": "v1522880912/weapons/Weirding Tome.png",
+    "Might": 14,
+    "Name": "Weirding Tome",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Blue"
+    }
+  },
+  {
+    "Effect": "",
+    "Exclusive": false,
+    "ImageUri": "v1522880914/weapons/Wind.png",
+    "Might": 4,
+    "Name": "Wind",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 50,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect":
+      "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action.",
+    "Exclusive": false,
+    "ImageUri": "v1522880916/weapons/Wind's Brand.png",
+    "Might": 14,
+    "Name": "Wind's Brand",
+    "Range": 2,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Tome",
+      "Color": "Green"
+    }
+  },
+  {
+    "Effect": "Effective against armored and cavalry foes.",
+    "Exclusive": false,
+    "ImageUri": "v1522880917/weapons/Wing Sword.png",
+    "Might": 16,
+    "Name": "Wing Sword",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants +10 to damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880918/weapons/Wo Dao.png",
+    "Might": 9,
+    "Name": "Wo Dao",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants +10 to damage when Special triggers.",
+    "Exclusive": false,
+    "ImageUri": "v1522880921/weapons/Wo Dao+.png",
+    "Might": 13,
+    "Name": "Wo Dao+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Grants Spd+4 during combat if unit initiates attack.",
+    "Exclusive": false,
+    "ImageUri": "v1522880922/weapons/Yato.png",
+    "Might": 16,
+    "Name": "Yato",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 400,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880924/weapons/Zanbato.png",
+    "Might": 10,
+    "Name": "Zanbato",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 200,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  },
+  {
+    "Effect": "Effective against cavalry units.",
+    "Exclusive": false,
+    "ImageUri": "v1522880925/weapons/Zanbato+.png",
+    "Might": 14,
+    "Name": "Zanbato+",
+    "Range": 1,
+    "Refined": false,
+    "WeaponCost": {
+      "Dew": null,
+      "Medals": null,
+      "SpCost": 300,
+      "Stones": null
+    },
+    "WeaponType": {
+      "Arm": "Sword",
+      "Color": "Red"
+    }
+  }
+]

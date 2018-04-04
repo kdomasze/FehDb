@@ -69,6 +69,19 @@ namespace FehDb.DAL.Contexts
                     var weapons = JsonConvert.DeserializeObject<List<WeaponResource>>(File.ReadAllText("Seed" + Path.DirectorySeparatorChar + GetFileName("Weapons")));
                     var refinedWeapons = JsonConvert.DeserializeObject<List<WeaponResource>>(File.ReadAllText("Seed" + Path.DirectorySeparatorChar + GetFileName("WeaponsRefined")));
 
+                    // gets images for refined weapons (since they have the same image as the unrefined versions)
+                    for(int i = 0; i < refinedWeapons.Count(); i++)
+                    {
+                        if(string.IsNullOrEmpty(refinedWeapons[i].ImageUri))
+                        {
+                            var split = refinedWeapons[i].Name.Split('(')[0];
+                            var fixedLength = split.Substring(0, split.Length - 1);
+                            var weaponWhere = weapons.Where(w => w.Name.Contains(fixedLength));
+
+                            refinedWeapons[i].ImageUri = weaponWhere.First().ImageUri;
+                        }
+                    }
+
                     await weaponService.CreateFromList(weapons);
                     await weaponService.CreateFromList(refinedWeapons);
                 }

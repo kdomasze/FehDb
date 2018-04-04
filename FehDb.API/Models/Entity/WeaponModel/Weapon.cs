@@ -10,6 +10,8 @@ namespace FehDb.API.Models.Entity.WeaponModel
         [Required]
         public string Name { get; set; }
         [Required]
+        public string ImageUri { get; set; }
+        [Required]
         public int Might { get; set; }
         [Required]
         public int Range { get; set; }
