@@ -52,7 +52,7 @@ namespace FehDb.API.Test.Extentions
         }
 
         [TestMethod]
-        public async Task GetByIdAsync()
+        public void GetById()
         {
             var data = new List<Weapon>()
             {
@@ -82,7 +82,7 @@ namespace FehDb.API.Test.Extentions
 
             var repo = new BaseRepository<Weapon>(mockContext.Object);
 
-            var result = await repo.GetById(2);
+            var result = repo.GetById(2);
 
             Assert.AreEqual(result.ID, 2);
         }

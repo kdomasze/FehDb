@@ -17,16 +17,25 @@ namespace FehDb.API.Business
     {
         public static bool CheckIfValidPassword(User user, string password, IConfiguration _configuration)
         {
-            var saltedHash = GenerateSaltedHash(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(user.Username + _configuration["Auth:Secret"]));
+            var saltedHash = GetHash(user.Username, password, _configuration["Auth:Secret"]);
+
+            var hashString = Encoding.Unicode.GetString(saltedHash);
 
             if (!CompareByteArrays(saltedHash, user.PasswordHash)) return false;
 
             return true;
         }
 
+        public static byte[] GetHash(string username, string password, string secret)
+        {
+            return GenerateSaltedHash(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(username + secret));
+        }
+
         public static byte[] GetHash(string username, string password, IConfiguration _configuration)
         {
-            return GenerateSaltedHash(Encoding.UTF8.GetBytes(password), Encoding.UTF8.GetBytes(username + _configuration["Auth:Secret"]));
+            var secret = _configuration["Auth:Secret"];
+
+            return GetHash(username, password, secret);
         }
 
         public static bool CheckWaitPeriod(User user, IConfiguration _configuration)
@@ -62,7 +71,7 @@ namespace FehDb.API.Business
             return algorithm.ComputeHash(plainTextWithSaltBytes);
         }
 
-        private static bool CompareByteArrays(byte[] array1, byte[] array2)
+        public static bool CompareByteArrays(byte[] array1, byte[] array2)
         {
             if (array1.Length != array2.Length)
             {
