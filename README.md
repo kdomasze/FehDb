@@ -7,7 +7,7 @@ A back-end RESTful database and API modeling the characters and related entities
 The eventual goal is to cover the following (**bold** entries are implemented, _italics_ are in process):
 
 * **Weapons**
-* Passives
+* _Passives_
 * Assists
 * Characters and their stats
 * Default ownership of weapons, passives, and assists
