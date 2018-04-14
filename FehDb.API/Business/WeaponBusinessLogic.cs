@@ -20,7 +20,7 @@ namespace FehDb.API.Business
             return weapon;
         }
 
-        private static IQueryable<Weapon> Search(IQueryable<Weapon> weapon, Query query)
+        public static IQueryable<Weapon> Search(IQueryable<Weapon> weapon, Query query)
         {
             if (query.Search == null) return weapon;
             weapon = weapon.Where(w => w.Name.Contains(query.Search) || w.Effect.Contains(query.Search));
@@ -28,7 +28,7 @@ namespace FehDb.API.Business
             return weapon;
         }
 
-        private static IQueryable<Weapon> Sort(IQueryable<Weapon> weapon, Query query)
+        public static IQueryable<Weapon> Sort(IQueryable<Weapon> weapon, Query query)
         {
             if (query.SortBy == null) return weapon;
             string[] sortBy = query.SortBy.Split(',');
@@ -53,7 +53,7 @@ namespace FehDb.API.Business
             return weapon;
         }
 
-        private static IQueryable<Weapon> Filter(IQueryable<Weapon> weapon, WeaponFilter filter)
+        public static IQueryable<Weapon> Filter(IQueryable<Weapon> weapon, WeaponFilter filter)
         {
             if (filter.HaveFilter())
             {
